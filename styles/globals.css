@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'GlacialIndifference';
+    src: url('/public/fonts/GlacialIndifference-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  /* Define the bold font */
+  @font-face {
+    font-family: 'GlacialIndifference';
+    src: url('/public/fonts/GlacialIndifference-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+  }
