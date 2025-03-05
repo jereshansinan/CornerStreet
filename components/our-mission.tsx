@@ -4,7 +4,7 @@ import { FaUtensils, FaDrumstickBite, FaGlobeAfrica } from "react-icons/fa";
 
 const OurMission = () => {
   return (
-    <section className="px-2 md:px-32 py-4 md:py-16 flex flex-col md:flex-row items-center gap-8">
+    <section className="px-2 md:px-32 py-4 md:py-16 flex flex-col md:flex-row items-center gap-8" id="our-mission">
       {/* Left Side - Text Section */}
       <div className="w-full md:w-1/2 flex flex-col justify-between order-1 md:order-0">
         <div className="mb-4">
@@ -62,6 +62,7 @@ const OurMission = () => {
       {/* Right Side - Image */}
       <div className="w-full md:w-1/2 relative order-0 md:order-1">
         <Image
+          isZoomed
           alt="Our Mission Image"
           className="w-full object-cover"
           height={0}

@@ -1,24 +1,24 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Next.js + HeroUI",
-  description: "Make beautiful websites regardless of your design experience.",
+  name: "Ntaba ya Jozi",
+  description: "Best In Town",
   navItems: [
     {
       label: "Our Story",
-      href: "/our-story",
+      href: "#our-story",
     },
     {
       label: "Our Mission",
-      href: "/our-mission",
+      href: "#our-mission",
     },
     {
       label: "How To Order",
-      href: "/how-to-order",
+      href: "#how-to-order",
     },
     {
       label: "FAQ",
-      href: "/faq",
+      href: "#faq",
     },
     {
       label: "Menu",
@@ -32,19 +32,19 @@ export const siteConfig = {
   navMenuItems: [
     {
       label: "Our Story",
-      href: "/our-story",
+      href: "#our-story",
     },
     {
       label: "Our Mission",
-      href: "/our-mission",
+      href: "#our-mission",
     },
     {
       label: "How To Order",
-      href: "/how-to-order",
+      href: "#how-to-order",
     },
     {
       label: "FAQ",
-      href: "/faq",
+      href: "#faq",
     },
     {
       label: "Menu",

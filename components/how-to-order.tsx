@@ -3,7 +3,7 @@ import React from "react";
 
 const HowToOrder = () => {
   return (
-    <section className="px-2 md:px-32 py-6 md:py-16">
+    <section className="px-2 md:px-32 py-6 md:py-16" id="how-to-order">
       {/* Section Heading */}
       <div className="text-center mb-8 md:mb-16">
         <div className="h-1 w-32 bg-[#9E6137] mb-2 rounded-lg mx-auto" />{" "}

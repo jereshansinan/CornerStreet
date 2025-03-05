@@ -1,3 +1,4 @@
+"use client";
 import {
   Navbar as HeroUINavbar,
   NavbarContent,
@@ -10,14 +11,22 @@ import {
 import { Link } from "@heroui/link";
 import { link as linkStyles } from "@heroui/theme";
 import NextLink from "next/link";
+import React, { useState } from "react";
 import clsx from "clsx";
 
 import { siteConfig } from "@/config/site";
 import { Logo } from "@/components/icons";
 
 export const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <HeroUINavbar maxWidth="xl" position="sticky">
+    <HeroUINavbar
+      isMenuOpen={isMenuOpen}
+      maxWidth="xl"
+      position="sticky"
+      onMenuOpenChange={setIsMenuOpen}
+    >
       {/* Logo aligned to the start */}
       <NavbarContent className="basis-1/5" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
@@ -58,13 +67,14 @@ export const Navbar = () => {
               <Link
                 color={
                   index === 2
-                    ? "primary"
+                    ? "foreground"
                     : index === siteConfig.navMenuItems.length - 1
-                      ? "danger"
+                      ? "foreground"
                       : "foreground"
                 }
-                href="#"
+                href={item.href}
                 size="lg"
+                onPress={() => setIsMenuOpen(false)}
               >
                 {item.label}
               </Link>

@@ -7,6 +7,7 @@ const OurVision = () => {
       {/* Left Side - Image */}
       <div className="w-full md:w-1/2 relative">
         <Image
+          isZoomed
           alt="Our Story Image"
           className="w-full object-cover"
           height={0}

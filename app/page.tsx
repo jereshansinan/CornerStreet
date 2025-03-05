@@ -10,13 +10,13 @@ export default function Home() {
   return (
     <Lenis>
       <section
-        className="flex flex-col items-center justify-center gap-4 py-8 md:py-10 relative bg-cover bg-center"
+        className="flex flex-col items-center justify-center gap-4 py-8 md:py-10 relative bg-cover bg-center bg-fixed"
         style={{
           backgroundImage: 'url("/home.jpeg")',
-          minHeight: "100vh",
+          height: "100vh",
         }}
       >
-        <div className="absolute inset-0 bg-black opacity-30" />{" "}
+        <div className="absolute inset-0 bg-black opacity-30" />
         <div className="inline-block max-w-xl text-center relative z-10">
           <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
             Best food for <br /> your taste
@@ -34,7 +34,7 @@ export default function Home() {
       <div
         className="w-full h-64 md:h-[600px] bg-fixed bg-cover bg-center"
         style={{
-          backgroundImage: "url('/ourstory.jpg')", // Replace with your image path
+          backgroundImage: "url('/ourstory.jpg')",
         }}
       >
         {/* Optional: Add overlay or text */}

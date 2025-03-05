@@ -3,10 +3,11 @@ import { Image } from "@heroui/image";
 
 const OurStory = () => {
   return (
-    <section className="px-2 md:px-32 py-6 md:py-16 flex flex-col md:flex-row items-center gap-8">
+    <section className="px-2 md:px-32 py-6 md:py-16 flex flex-col md:flex-row items-center gap-8" id="our-story">
       {/* Left Side - Image */}
       <div className="w-full md:w-1/2 relative">
         <Image
+          isZoomed
           alt="Our Story Image"
           className="w-full object-cover"
           height={0}
