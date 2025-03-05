@@ -5,7 +5,7 @@ import { FaWhatsapp, FaInstagram, FaTiktok } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="px-2 md:px-32 py-6 md:py-16 bg-white">
+    <footer className="px-2 md:px-32 py-6 md:py-16 bg-[#F1F0EF]">
       {/* Logo */}
       <div className="flex justify-center mb-8">
         <Image
@@ -58,7 +58,7 @@ const Footer = () => {
       </div>
 
       {/* Brown Line */}
-      <div className="h-1 bg-[#9E6137] my-8" />
+      <div className="h-1 bg-[#9E6137] my-8 rounded-lg" />
 
       {/* Social Media and Contact Info */}
       <div className="flex flex-col md:flex-row justify-between items-center md:items-start space-y-8 md:space-y-0">
@@ -98,7 +98,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="h-1 bg-[#9E6137] my-8" />
+      <div className="h-1 bg-[#9E6137] my-8 rounded-lg" />
 
       {/* Copyright */}
       <div className="text-center text-lg md:text-xl text-gray-700">
