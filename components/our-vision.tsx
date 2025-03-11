@@ -11,7 +11,7 @@ const OurVision = () => {
           alt="Our Story Image"
           className="w-full object-cover"
           height={0}
-          src="/ourstory.jpg"
+          src="/vision.jpg"
           style={{ height: "100%" }} // Ensure image takes full height of parent container
           width={1000}
         />

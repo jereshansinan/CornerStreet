@@ -12,7 +12,7 @@ export default function Home() {
       <section
         className="flex flex-col items-center justify-center gap-4 py-8 md:py-10 relative bg-cover bg-center bg-fixed"
         style={{
-          backgroundImage: 'url("/home.jpeg")',
+          backgroundImage: 'url("/home.jpg")',
           height: "100vh",
         }}
       >
@@ -34,7 +34,7 @@ export default function Home() {
       <div
         className="w-full h-64 md:h-[600px] bg-fixed bg-cover bg-center"
         style={{
-          backgroundImage: "url('/ourstory.jpg')",
+          backgroundImage: "url('/taste2.jpg')",
         }}
       >
         {/* Optional: Add overlay or text */}

@@ -12,21 +12,21 @@ export default function MenuPage() {
       items: [
         {
           id: 1,
-          image: "/ourstory.jpg",
+          image: "/2kg.jpg",
           title: "Special Order",
           description: "Minimum 2kg Required",
           price: "R900",
         },
         {
           id: 2,
-          image: "/menu/braai-ntaba-2.jpg",
+          image: "/bigbox.jpg",
           title: "Big Box",
           description: "700g",
           price: "R300",
         },
         {
           id: 3,
-          image: "/menu/braai-ntaba-2.jpg",
+          image: "/1personbox.jpg",
           title: "1 person Box",
           description: "350g + free sweet potatoes",
           price: "R150",
@@ -39,14 +39,14 @@ export default function MenuPage() {
       items: [
         {
           id: 3,
-          image: "/menu/stew-1.jpg",
+          image: "/saucybox.jpg",
           title: "Saucy Box",
           description: "Goat meat in a spicy or mild sauce",
           price: "R110",
         },
         {
           id: 4,
-          image: "/menu/stew-2.jpg",
+          image: "/mogodu.jpg",
           title: "Mogodu",
           description: "Mabumu/Cow's Tripe",
           price: "R220",
@@ -80,7 +80,7 @@ export default function MenuPage() {
       items: [
         {
           id: 7,
-          image: "/menu/veggies-1.jpg",
+          image: "/fumbwa.jpg",
           title: "Fumbwa",
           description: "Wild Spinach",
           price: "R90",
@@ -94,7 +94,7 @@ export default function MenuPage() {
         },
         {
           id: 9,
-          image: "/menu/veggies-2.jpg",
+          image: "/pondu.jpg",
           title: "Pondu",
           description: "Cassava Leaves",
           price: "R80",
@@ -107,14 +107,14 @@ export default function MenuPage() {
       items: [
         {
           id: 9,
-          image: "/menu/sauce-1.jpg",
+          image: "/plantains.jpg",
           title: "Fried or Boiled Plantains",
           description: "",
           price: "R30",
         },
         {
           id: 10,
-          image: "/menu/sauce-2.jpg",
+          image: "/fufu.jpg",
           title: "Pap",
           description: "Fufu",
           price: "R25",
@@ -141,21 +141,21 @@ export default function MenuPage() {
       items: [
         {
           id: 13,
-          image: "/menu/sauce-1.jpg",
+          image: "/green.jpg",
           title: "Green Chilli",
           description: "For seafood delights",
           price: "R105",
         },
         {
           id: 14,
-          image: "/menu/sauce-2.jpg",
+          image: "/red.jpg",
           title: "Red Chilli",
           description: "For red meat dishes",
           price: "R105",
         },
         {
           id: 15,
-          image: "/menu/sauce-2.jpg",
+          image: "/orange.jpg",
           title: "Orange Chilli",
           description: "For game/red meat, sandwiches etc.",
           price: "R105",
@@ -177,7 +177,7 @@ export default function MenuPage() {
       <section
         className="flex flex-col items-center justify-center gap-4 py-6 md:py-16 relative bg-cover bg-center bg-fixed"
         style={{
-          backgroundImage: 'url("/home.jpeg")',
+          backgroundImage: 'url("/home.jpg")',
           height: "100vh",
         }}
       >
@@ -246,7 +246,7 @@ export default function MenuPage() {
                 className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105"
               >
                 {/* Image */}
-                <div className="w-full h-52 relative">
+                <div className="w-full h-72 relative">
                   <Image
                     fill
                     alt={item.title}

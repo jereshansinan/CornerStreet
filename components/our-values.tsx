@@ -21,7 +21,7 @@ const OurValues = () => {
               alt="Value 1 Image"
               className="w-full h-64 md:h-80 object-cover rounded-lg"
               height={400}
-              src="/ourstory.jpg" // Replace with your image path
+              src="/home.jpeg" // Replace with your image path
               width={600}
             />
           </div>
@@ -41,7 +41,7 @@ const OurValues = () => {
               alt="Value 2 Image"
               className="w-full h-64 md:h-80 object-cover rounded-lg"
               height={400}
-              src="/ourstory.jpg" // Replace with your image path
+              src="/innovation.jpg" // Replace with your image path
               width={600}
             />
           </div>
@@ -61,7 +61,7 @@ const OurValues = () => {
               alt="Value 3 Image"
               className="w-full h-64 md:h-80 object-cover rounded-lg"
               height={400}
-              src="/ourstory.jpg" // Replace with your image path
+              src="/diversity.jpg" // Replace with your image path
               width={600}
             />
           </div>
@@ -81,7 +81,7 @@ const OurValues = () => {
               alt="Value 4 Image"
               className="w-full h-64 md:h-80 object-cover rounded-lg"
               height={400}
-              src="/ourstory.jpg" // Replace with your image path
+              src="/other.jpg" // Replace with your image path
               width={600}
             />
           </div>

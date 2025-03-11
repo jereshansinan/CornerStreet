@@ -66,7 +66,7 @@ const OurMission = () => {
           alt="Our Mission Image"
           className="w-full object-cover"
           height={0}
-          src="/ourstory.jpg"
+          src="/mission.jpg"
           style={{ height: "100%" }}
           width={1000}
         />

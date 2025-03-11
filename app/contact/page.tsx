@@ -11,7 +11,7 @@ export default function ContactPage() {
       <section
         className="flex flex-col items-center justify-center gap-4 py-6 md:py-16 relative bg-cover bg-center bg-fixed"
         style={{
-          backgroundImage: 'url("/home.jpeg")',
+          backgroundImage: 'url("/home.jpg")',
           height: "100vh",
         }}
       >
