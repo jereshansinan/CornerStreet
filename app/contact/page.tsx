@@ -1,10 +1,54 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
+import { useState } from "react";
 import { Form, Input, Button } from "@heroui/react";
 import { Image } from "@heroui/image";
 
 import Lenis from "@/components/lenis";
 
 export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+  const [loading, setLoading] = useState(false);
+  const [responseMessage, setResponseMessage] = useState("");
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    setResponseMessage("");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        setResponseMessage("Your message has been sent successfully!");
+        setFormData({ name: "", email: "", phone: "", message: "" });
+      } else {
+        setResponseMessage(
+          data.error || "Failed to send message. Please try again.",
+        );
+      }
+    } catch (error) {
+      setResponseMessage("An error occurred. Please try again.");
+    }
+
+    setLoading(false);
+  };
+
   return (
     <Lenis>
       {/* Hero Section */}
@@ -32,40 +76,47 @@ export default function ContactPage() {
               Leave Us A Message
             </h2>
             <p className="text-lg md:text-xl text-gray-600 mb-8">
-              Have questions about our catering services? Whether it&apos;s a
-              corporate event, wedding, or special occasion, we&apos;re here to
-              help! Fill out the form below, and we&apos;ll get back to you as
-              soon as possible.
+              Have questions about our catering services? Fill out the form
+              below, and we&apos;ll get back to you as soon as possible.
             </p>
-            <Form>
+            <Form onSubmit={handleSubmit}>
               <div className="space-y-6 w-full">
                 {/* Full Name */}
                 <div className="w-full">
                   <Input
                     required
-                    className="w-full" // Make the input full width
+                    className="w-full"
                     label="Full Name"
+                    name="name"
                     placeholder="Enter your full name"
+                    value={formData.name}
+                    onChange={handleChange}
                   />
                 </div>
                 {/* Email */}
                 <div className="w-full">
                   <Input
                     required
-                    className="w-full" // Make the input full width
+                    className="w-full"
                     label="Email"
+                    name="email"
                     placeholder="Enter your email"
                     type="email"
+                    value={formData.email}
+                    onChange={handleChange}
                   />
                 </div>
                 {/* Phone Number */}
                 <div className="w-full">
                   <Input
                     required
-                    className="w-full" // Make the input full width
+                    className="w-full"
                     label="Phone Number"
+                    name="phone"
                     placeholder="Enter your phone number"
                     type="tel"
+                    value={formData.phone}
+                    onChange={handleChange}
                   />
                 </div>
                 {/* Message */}
@@ -74,13 +125,24 @@ export default function ContactPage() {
                     required
                     className="w-full"
                     label="Message"
+                    name="message"
                     placeholder="Enter your message"
+                    value={formData.message}
+                    onChange={handleChange}
                   />
                 </div>
                 {/* Submit Button */}
-                <Button className="w-full md:w-auto" type="submit">
-                  Send Message
+                <Button
+                  className="w-full md:w-auto"
+                  disabled={loading}
+                  type="submit"
+                >
+                  {loading ? "Sending..." : "Send Message"}
                 </Button>
+                {/* Response Message */}
+                {responseMessage && (
+                  <p className="mt-4 text-center text-lg">{responseMessage}</p>
+                )}
               </div>
             </Form>
           </div>

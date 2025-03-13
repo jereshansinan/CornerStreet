@@ -5,9 +5,9 @@ const OurValues = () => {
   return (
     <section className="px-2 md:px-32 py-6 md:py-16">
       {/* Section Heading */}
-      <div className="text-center mb-8 md:mb-16">
+      <div className="mb-8 md:mb-16 text-left md:text-center">
         {/* Thin brown line */}
-        <div className="h-1 w-32 bg-[#9E6137] mb-2 rounded-lg mx-auto" />
+        <div className="h-1 w-32 bg-[#9E6137] mb-2 rounded-lg mx-0 md:mx-auto" />
         <h2 className="text-3xl md:text-5xl font-bold">Our Values</h2>{" "}
         {/* Larger heading */}
       </div>
@@ -15,13 +15,13 @@ const OurValues = () => {
       {/* Grid for Values */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {/* Value 1 */}
-        <div className="flex flex-col items-center text-center">
+        <div className="flex flex-col items-start md:items-center text-left md:text-center">
           <div className="mb-4 w-full">
             <Image
               alt="Value 1 Image"
               className="w-full h-64 md:h-80 object-cover rounded-lg"
               height={400}
-              src="/home.jpeg" // Replace with your image path
+              src="/home.jpeg"
               width={600}
             />
           </div>
@@ -35,13 +35,13 @@ const OurValues = () => {
         </div>
 
         {/* Value 2 */}
-        <div className="flex flex-col items-center text-center">
+        <div className="flex flex-col items-start md:items-center text-left md:text-center">
           <div className="mb-4 w-full">
             <Image
               alt="Value 2 Image"
               className="w-full h-64 md:h-80 object-cover rounded-lg"
               height={400}
-              src="/innovation.jpg" // Replace with your image path
+              src="/innovation.jpg"
               width={600}
             />
           </div>
@@ -55,13 +55,13 @@ const OurValues = () => {
         </div>
 
         {/* Value 3 */}
-        <div className="flex flex-col items-center text-center">
+        <div className="flex flex-col items-start md:items-center text-left md:text-center">
           <div className="mb-4 w-full">
             <Image
               alt="Value 3 Image"
               className="w-full h-64 md:h-80 object-cover rounded-lg"
               height={400}
-              src="/diversity.jpg" // Replace with your image path
+              src="/diversity.jpg"
               width={600}
             />
           </div>
@@ -75,13 +75,13 @@ const OurValues = () => {
         </div>
 
         {/* Value 4 */}
-        <div className="flex flex-col items-center text-center">
+        <div className="flex flex-col items-start md:items-center text-left md:text-center">
           <div className="mb-4 w-full">
             <Image
               alt="Value 4 Image"
               className="w-full h-64 md:h-80 object-cover rounded-lg"
               height={400}
-              src="/other.jpg" // Replace with your image path
+              src="/other.jpg"
               width={600}
             />
           </div>

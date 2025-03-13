@@ -32,18 +32,19 @@ export default function Home() {
       <OurVision />
       <OurValues />
       <div
-        className="w-full h-64 md:h-[600px] bg-fixed bg-cover bg-center"
+        className="w-full h-64 md:h-[600px] bg-fixed bg-center bg-contain md:bg-cover"
         style={{
           backgroundImage: "url('/taste2.jpg')",
+          backgroundRepeat: "no-repeat",
         }}
       >
-        {/* Optional: Add overlay or text */}
         <div className="w-full h-full flex items-center justify-center bg-black bg-opacity-40">
           <h2 className="text-3xl md:text-5xl font-bold text-white text-center">
             Discover the Taste of Africa
           </h2>
         </div>
       </div>
+
       <HowToOrder />
       <FAQ />
     </Lenis>

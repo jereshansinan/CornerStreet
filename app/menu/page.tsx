@@ -60,14 +60,14 @@ export default function MenuPage() {
       items: [
         {
           id: 5,
-          image: "/menu/chicken-mayo-1.jpg",
+          image: "/menu/chicken-mayo-2.jpg",
           title: "Full Chicken",
           description: "",
           price: "R250",
         },
         {
           id: 6,
-          image: "/menu/chicken-mayo-2.jpg",
+          image: "/halfchicken.jpg",
           title: "1/2 Chicken",
           description: "",
           price: "R130",
@@ -190,7 +190,7 @@ export default function MenuPage() {
       </section>
 
       {/* Heading and Subheading */}
-      <section className="px-2 md:px-32 py-6 md:py-16 text-center">
+      <section className="px-2 md:px-32 py-6 md:py-6 text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
           Explore Our Delicious Offerings
         </h2>
@@ -201,7 +201,7 @@ export default function MenuPage() {
       </section>
 
       {/* Menu Navigation Links */}
-      <section className="px-2 md:px-32 py-6 md:py-16">
+      <section className="px-2 md:px-32 py-6 md:py-6">
         <div className="flex flex-wrap justify-center gap-4">
           {menuSections.map((section) => (
             <a
