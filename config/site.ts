@@ -6,19 +6,19 @@ export const siteConfig = {
   navItems: [
     {
       label: "Our Story",
-      href: "#our-story",
+      href: "/#our-story",
     },
     {
       label: "Our Mission",
-      href: "#our-mission",
+      href: "/#our-mission",
     },
     {
       label: "How To Order",
-      href: "#how-to-order",
+      href: "/#how-to-order",
     },
     {
       label: "FAQ",
-      href: "#faq",
+      href: "/#faq",
     },
     {
       label: "Menu",
@@ -32,19 +32,19 @@ export const siteConfig = {
   navMenuItems: [
     {
       label: "Our Story",
-      href: "#our-story",
+      href: "/#our-story",
     },
     {
       label: "Our Mission",
-      href: "#our-mission",
+      href: "/#our-mission",
     },
     {
       label: "How To Order",
-      href: "#how-to-order",
+      href: "/#how-to-order",
     },
     {
       label: "FAQ",
-      href: "#faq",
+      href: "/#faq",
     },
     {
       label: "Menu",
