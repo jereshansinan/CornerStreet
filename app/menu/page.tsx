@@ -39,14 +39,14 @@ export default function MenuPage() {
       items: [
         {
           id: 3,
-          image: "/saucybox.jpg",
+          image: "/Saucybox.png",
           title: "Saucy Box",
           description: "Goat meat in a spicy or mild sauce",
           price: "R110",
         },
         {
           id: 4,
-          image: "/mogodu.jpg",
+          image: "/Mogodu.png",
           title: "Mogodu",
           description: "Mabumu/Cow's Tripe",
           price: "R220",
@@ -60,7 +60,7 @@ export default function MenuPage() {
       items: [
         {
           id: 5,
-          image: "/menu/chicken-mayo-2.jpg",
+          image: "/CMclose.png",
           title: "Full Chicken",
           description: "",
           price: "R250",
