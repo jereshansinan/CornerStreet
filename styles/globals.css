@@ -16,3 +16,29 @@
     font-weight: 700;
     font-style: normal;
   }
+
+  .hero-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* Background image using ::before */
+  .hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("../public/home.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  
+  /* On mobile, rotate ONLY the background */
+  @media (max-width: 768px) {
+    .hero-section::before {
+      background-image: url("../public/homemobile.jpg");
+    }
+  }
+  
+  

@@ -39,7 +39,7 @@ export default function ContactPage() {
         setFormData({ name: "", email: "", phone: "", message: "" });
       } else {
         setResponseMessage(
-          data.error || "Failed to send message. Please try again.",
+          data.error || "Failed to send message. Please try again."
         );
       }
     } catch (error) {
@@ -52,14 +52,8 @@ export default function ContactPage() {
   return (
     <Lenis>
       {/* Hero Section */}
-      <section
-        className="flex flex-col items-center justify-center gap-4 py-6 md:py-16 relative bg-cover bg-center bg-fixed"
-        style={{
-          backgroundImage: 'url("/home.jpg")',
-          height: "100vh",
-        }}
-      >
-        <div className="absolute inset-0 bg-black opacity-30" />
+      <section className="hero-section flex flex-col items-center justify-center gap-4 py-8 md:py-10 relative">
+        <div className="absolute inset-0 bg-black opacity-20" />
         <div className="inline-block max-w-xl text-center relative z-10">
           <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
             Contact Us
