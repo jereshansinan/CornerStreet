@@ -87,7 +87,7 @@ export default function MenuPage() {
         },
         {
           id: 8,
-          image: "/menu/veggies-2.jpg",
+          image: "/spinach.jpg",
           title: "Spinach",
           description: "",
           price: "R80",
@@ -121,14 +121,14 @@ export default function MenuPage() {
         },
         {
           id: 11,
-          image: "/menu/sauce-2.jpg",
+          image: "/kwanga.jpg",
           title: "Kwanga",
           description: "Cassava Bread",
           price: "R25",
         },
         {
           id: 12,
-          image: "/menu/sauce-2.jpg",
+          image: "/sweetpotatoes.jpg",
           title: "Fried or Boiled Sweet Potatoes",
           description: "",
           price: "R25",
