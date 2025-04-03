@@ -31,7 +31,7 @@
     background-image: url("../public/home.jpg");
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll;
   }
   
   /* On mobile, rotate ONLY the background */
@@ -40,5 +40,12 @@
       background-image: url("../public/homemobile.jpg");
     }
   }
+
+  /* Apply fixed background only on desktop devices (min-width: 1024px) */
+@media (min-width: 1024px) {
+  .hero-section::before {
+      background-attachment: fixed;
+  }
+}
   
   

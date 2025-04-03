@@ -27,7 +27,7 @@ export default function Home() {
       <OurVision />
       <OurValues />
       <div
-        className="w-full h-64 md:h-[600px] bg-fixed bg-center bg-contain md:bg-cover"
+        className="w-full h-64 md:h-[600px] bg-scroll md:bg-fixed bg-center bg-cover"
         style={{
           backgroundImage: "url('/taste2.jpg')",
           backgroundRepeat: "no-repeat",
