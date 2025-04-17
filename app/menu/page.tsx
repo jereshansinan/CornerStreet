@@ -162,7 +162,7 @@ export default function MenuPage() {
         },
         {
           id: 16,
-          image: "/menu/sauce-2.jpg",
+          image: "/GreenSauce.jpg",
           title: "Green Sauces",
           description: "For any meat, mild",
           price: "R110",

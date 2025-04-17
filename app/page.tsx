@@ -13,11 +13,10 @@ export default function Home() {
         <div className="overlay absolute inset-0 bg-black opacity-20" />
         <div className="content text-center relative z-10 max-w-xl">
           <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
-            Best food for <br /> your taste
+            Ntaba Ya Jozi - A Taste <br /> of Home, Made with Heart
           </h1>
           <p className="mt-4 text-lg md:text-xl text-white">
-            Discover delectable cuisine and unforgettable moments in our
-            welcoming, culinary haven.
+            Enjoy authentic African flavours, crafted with love and tradition in every bite.
           </p>
         </div>
       </section>
