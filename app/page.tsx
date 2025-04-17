@@ -15,7 +15,7 @@ export default function Home() {
           <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
             Ntaba Ya Jozi - A Taste <br /> of Home, Made with Heart
           </h1>
-          <p className="mt-4 text-lg md:text-xl text-white">
+          <p className="mt-4 text-lg md:text-xl text-white px-2">
             Enjoy authentic African flavours, crafted with love and tradition in every bite.
           </p>
         </div>
