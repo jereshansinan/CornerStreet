@@ -20,7 +20,7 @@ export async function POST(req: Request) {
     // Email content
     const mailOptions = {
       from: `"${name}" <${process.env.EMAIL_USER}>`,
-      to: "info@ntabayajozi.com",
+      to: "youmeshanee.sinan@resbank.co.za",
       subject: "New Contact Form Submission",
       html: `<!DOCTYPE html>
 <html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="en">
@@ -159,7 +159,7 @@ export async function POST(req: Request) {
 														<tr>
 															<td class="pad" style="width:100%;padding-right:0px;padding-left:0px;">
 																<div class="alignment" align="center" style="line-height:10px">
-																	<div style="max-width: 149px;"><img src="https://0120c34948.imgdist.com/pub/bfra/m59h0lld/dxx/ng4/7kx/NtabaLogo.png" style="display: block; height: auto; border: 0; width: 100%;" width="149" alt="Company Logo" title="Company Logo" height="auto"></div>
+																	<div style="max-width: 149px;"><img src="/logo.png" style="display: block; height: auto; border: 0; width: 100%;" width="149" alt="Company Logo" title="Company Logo" height="auto"></div>
 																</div>
 															</td>
 														</tr>
@@ -322,7 +322,7 @@ export async function POST(req: Request) {
 																<!--[if !vml]><!-->
 																<table class="icons-inner" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; display: inline-block; padding-left: 0px; padding-right: 0px;" cellpadding="0" cellspacing="0" role="presentation"><!--<![endif]-->
 																	<tr>
-																		<td style="font-family: 'Inter', sans-serif; font-size: 15px; font-weight: undefined; color: #1e0e4b; vertical-align: middle; letter-spacing: undefined; text-align: center; line-height: normal;"><a  target="_blank" style="color: #1e0e4b; text-decoration: none;">Ntaba Ya Jozi</a></td>
+																		<td style="font-family: 'Inter', sans-serif; font-size: 15px; font-weight: undefined; color: #1e0e4b; vertical-align: middle; letter-spacing: undefined; text-align: center; line-height: normal;"><a  target="_blank" style="color: #1e0e4b; text-decoration: none;">Indian Savoury Delights</a></td>
 																	</tr>
 																</table>
 															</td>

@@ -2,87 +2,385 @@
 import {
   Navbar as HeroUINavbar,
   NavbarContent,
-  NavbarMenu,
-  NavbarMenuToggle,
   NavbarBrand,
-  NavbarItem,
-  NavbarMenuItem,
 } from "@heroui/navbar";
-import { Link } from "@heroui/link";
-import { link as linkStyles } from "@heroui/theme";
+import React, { useState, useEffect, useRef } from "react";
 import NextLink from "next/link";
-import React, { useState } from "react";
 import clsx from "clsx";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
+import { Image } from "@heroui/image";
+import gsap from "gsap";
 
-import { siteConfig } from "@/config/site";
-import { Logo } from "@/components/icons";
+const menuLinks = [
+  { label: "Home", href: "/" },
+  { label: "Menu", href: "/menu" },
+  { label: "Contact", href: "/contact" },
+  { label: "Catering", href: "#catering" },
+];
+
+const socialLinks = [
+  { label: "behance", href: "https://www.behance.net" },
+  { label: "instagram", href: "https://www.instagram.com" },
+  { label: "linkedin", href: "https://www.linkedin.com" },
+  { label: "facebook", href: "https://www.facebook.com" },
+];
 
 export const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const router = useRouter();
+
+  const menuToggleRef = useRef<HTMLButtonElement | null>(null);
+  const menuOverlayRef = useRef<HTMLDivElement | null>(null);
+  const menuContentRef = useRef<HTMLDivElement | null>(null);
+  const menuPreviewImgRef = useRef<HTMLDivElement | null>(null);
+  const menuLinkRefs = useRef<HTMLAnchorElement[]>([]);
+  const socialLinkRefs = useRef<HTMLAnchorElement[]>([]);
+
+  const handleClick = () => {
+    try {
+      router.push("/menu");
+    } catch (error) {
+      console.error("Navigation error:", error);
+    }
+  };
+
+  const openMenu = () => {
+    if (isAnimating || isOpen) return;
+    setIsAnimating(true);
+
+    /*gsap.to(container, {
+      rotation: 10,
+      x: 300,
+      y: 450,
+      scale: 1.5,
+      duration: 1.25,
+      ease: "power4.inOut",
+    });*/
+
+    gsap.to(menuContentRef.current, {
+      rotation: 0,
+      x: 0,
+      y: 0,
+      scale: 1,
+      opacity: 1,
+      duration: 1.25,
+      ease: "power4.inOut",
+    });
+
+    gsap.to([menuLinkRefs.current, socialLinkRefs.current], {
+      y: "0%",
+      opacity: 1,
+      duration: 1,
+      delay: 0.75,
+      stagger: 0.1,
+      ease: "power3.inOut",
+    });
+
+    gsap.to(menuOverlayRef.current, {
+      clipPath: "polygon(0% 0%, 100% 0%, 100% 175%, 0% 100%)",
+      duration: 1.25,
+      ease: "power4.inOut",
+      onComplete: () => {
+        setIsOpen(true);
+        setIsAnimating(false);
+      },
+    });
+  };
+
+  const resetPreviewImage = () => {
+    if (!menuPreviewImgRef.current) return;
+    menuPreviewImgRef.current.innerHTML = "";
+    const defaultPreviewImg = document.createElement("img");
+
+    defaultPreviewImg.src = "/biryani.jpg";
+    menuPreviewImgRef.current.appendChild(defaultPreviewImg);
+  };
+
+  const closeMenu = () => {
+    if (isAnimating || !isOpen) return;
+    setIsAnimating(true);
+
+    /*gsap.to(container, {
+      rotation: 0,
+      x: 0,
+      y: 0,
+      scale: 1,
+      duration: 1.25,
+      ease: "power4.inOut",
+    });
+    */
+
+    gsap.to(menuContentRef.current, {
+      rotation: -15,
+      x: -100,
+      y: -100,
+      scale: 1.5,
+      opacity: 0.25,
+      duration: 1.25,
+      ease: "power4.inOut",
+    });
+
+    gsap.to(menuOverlayRef.current, {
+      clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+      duration: 1.25,
+      ease: "power4.inOut",
+      onComplete: () => {
+        setIsOpen(false);
+        setIsAnimating(false);
+        gsap.set([menuLinkRefs.current, socialLinkRefs.current], { y: "120%" });
+        resetPreviewImage();
+      },
+    });
+  };
+
+  const handleScroll = () => {
+    setScrolled(window.scrollY > 10);
+  };
+
+  useEffect(() => {
+    const cleanupPreviewImage = () => {
+      if (!menuPreviewImgRef.current) return;
+      const previewImages = menuPreviewImgRef.current.querySelectorAll("img");
+
+      if (previewImages.length > 3) {
+        for (let i = 0; i < previewImages.length - 3; i++) {
+          menuPreviewImgRef.current.removeChild(previewImages[1]);
+        }
+      }
+    };
+
+    const animateToggle = () => {};
+
+    menuLinkRefs.current.forEach((link) => {
+      link.addEventListener("mouseover", () => {
+        if (!isOpen || isAnimating) return;
+
+        const imgSrc = link.getAttribute("data-img");
+
+        if (!imgSrc || !menuPreviewImgRef.current) return;
+
+        const previewImages =
+          menuPreviewImgRef.current?.querySelectorAll("img");
+
+        if (
+          previewImages?.length > 0 &&
+          previewImages[previewImages.length - 1].src.endsWith(imgSrc)
+        )
+          return;
+
+        const newPreviewImg = document.createElement("img");
+
+        newPreviewImg.src = imgSrc;
+        newPreviewImg.style.opacity = "0%";
+        newPreviewImg.style.transform = "scale(1.25) rotate(10deg)";
+
+        menuPreviewImgRef.current.appendChild(newPreviewImg);
+        cleanupPreviewImage();
+
+        gsap.to(newPreviewImg, {
+          opacity: 1,
+          scale: 1,
+          rotation: 0,
+          duration: 0.75,
+          ease: "power2.inOut",
+        });
+      });
+    });
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const handleMenuClick = () => {
+    if (!isOpen) openMenu();
+    else closeMenu();
+  };
 
   return (
-    <HeroUINavbar
-      isMenuOpen={isMenuOpen}
-      maxWidth="xl"
-      position="sticky"
-      onMenuOpenChange={setIsMenuOpen}
-    >
-      {/* Logo aligned to the start */}
-      <NavbarContent className="basis-1/5" justify="start">
-        <NavbarBrand as="li" className="gap-3 max-w-fit">
-          <NextLink className="flex justify-start items-center gap-1" href="/">
-            <Logo src="/NtabaLogo.png" />
-          </NextLink>
-        </NavbarBrand>
-      </NavbarContent>
+    <>
+      <HeroUINavbar
+        className={clsx(
+          "fixed top-0 left-0 w-full z-50 transition-colors duration-500 py-2 pt-4",
+          scrolled ? "bg-[#fef3c7] shadow-md" : "bg-transparent"
+        )}
+        isBlurred={false}
+        isMenuOpen={false}
+        maxWidth="full"
+      >
+        {/* Left - Social Icons */}
+        <NavbarContent className="px-4 md:px-12 hidden md:flex" justify="start">
+          <div
+            className={clsx(
+              "flex items-center gap-3",
+              scrolled ? "text-black" : "text-white"
+            )}
+          >
+            <a
+              href="https://instagram.com"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              INSTAGRAM
+            </a>
+          </div>
+        </NavbarContent>
 
-      {/* Navigation links centered */}
-      <NavbarContent className="hidden lg:flex basis-3/5 justify-center">
-        <ul className="flex gap-4">
-          {siteConfig.navItems.map((item) => (
-            <NavbarItem key={item.href}>
-              <NextLink
+        {/* Center - Logo */}
+        <NavbarContent
+          className="w-full px-1 md:px-12 flex justify-between items-center md:justify-center"
+          justify="center"
+        >
+          {/* Mobile: MENU button on the left */}
+          <div className="md:hidden">
+            <button
+              className={clsx(
+                "px-3 py-2 rounded-full backdrop-blur-md transition-colors duration-300 border text-sm",
+                scrolled
+                  ? "border-black text-black hover:bg-[#830323] hover:border-[#830323] hover:text-white"
+                  : "border-white text-white hover:bg-[#fef3c7] hover:text-black"
+              )}
+              onClick={handleClick}
+            >
+              Menu
+            </button>
+          </div>
+
+          {/* Logo in center */}
+          <NavbarBrand className="flex-1 flex justify-center md:justify-center">
+            <NextLink className="flex justify-center items-center" href="/">
+              <h1
                 className={clsx(
-                  linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-medium",
+                  "text-base md:text-3xl leading-tight text-center",
+                  scrolled ? "text-black" : "text-white"
                 )}
-                color="foreground"
-                href={item.href}
-                scroll={true}
               >
-                {item.label}
-              </NextLink>
-            </NavbarItem>
-          ))}
-        </ul>
-      </NavbarContent>
+                <span className="block">INDIAN</span>
+                <span className="block">SAVOURY</span>
+                <span className="block">DELIGHTS</span>
+              </h1>
+            </NextLink>
+          </NavbarBrand>
 
-      <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
-        <NavbarMenuToggle />
-      </NavbarContent>
+          {/* Hamburger button on right */}
+          <div className="md:hidden">
+            <button
+              ref={menuToggleRef}
+              className={clsx(
+                "w-10 h-10 rounded-full flex backdrop-blur-md items-center justify-center border transition-colors duration-300",
+                scrolled
+                  ? "border-black text-black hover:bg-[#830323] hover:border-[#830323] hover:text-white"
+                  : "border-white text-white hover:bg-[#fef3c7] hover:text-black"
+              )}
+              onClick={handleMenuClick}
+            >
+              ☰
+            </button>
+          </div>
+        </NavbarContent>
 
-      <NavbarMenu>
-        <div className="mx-4 mt-2 flex flex-col gap-2">
-          {siteConfig.navMenuItems.map((item, index) => (
-            <NavbarMenuItem key={`${item}-${index}`}>
-              <Link
-                color={
-                  index === 2
-                    ? "foreground"
-                    : index === siteConfig.navMenuItems.length - 1
-                      ? "foreground"
-                      : "foreground"
-                }
-                href={item.href}
-                size="lg"
-                onPress={() => setIsMenuOpen(false)}
-              >
-                {item.label}
-              </Link>
-            </NavbarMenuItem>
-          ))}
+        {/* Right buttons for desktop only */}
+        <NavbarContent className="px-4 md:px-12 hidden md:flex" justify="end">
+          <div className="flex items-center gap-3">
+            <button
+              className={clsx(
+                "px-6 py-4 rounded-full backdrop-blur-md transition-colors duration-300 border",
+                scrolled
+                  ? "border-black text-black hover:bg-[#830323] hover:border-[#830323] hover:text-white"
+                  : "border-white text-white hover:bg-[#fef3c7] hover:text-black"
+              )}
+              onClick={handleClick}
+            >
+              Menu
+            </button>
+
+            <button
+              ref={menuToggleRef}
+              className={clsx(
+                "menu-toggle w-12 h-12 rounded-full flex backdrop-blur-md items-center justify-center border transition-colors duration-300",
+                scrolled
+                  ? "border-black text-black hover:bg-[#830323] hover:border-[#830323] hover:text-white"
+                  : "border-white text-white hover:bg-[#fef3c7] hover:text-black"
+              )}
+              onClick={handleMenuClick}
+            >
+              ☰
+            </button>
+          </div>
+        </NavbarContent>
+      </HeroUINavbar>
+
+      <div ref={menuOverlayRef} className="menu-overlay px-4 md:px-12">
+        <button
+          className={clsx(
+            "absolute top-4 right-[4rem] z-50 w-12 h-12 rounded-full flex items-center justify-center border backdrop-blur-md transition-colors duration-300",
+            "border-white text-white hover:bg-[#fef3c7] hover:text-black hover:border-[#fef3c7]"
+          )}
+          onClick={handleMenuClick}
+        >
+          ✕
+        </button>
+        <div ref={menuContentRef} className="menu-content">
+          <div className="menu-items">
+            <div className="col-lg">
+              <div ref={menuPreviewImgRef} className="menu-preview-img">
+                <img
+                  alt="preview"
+                  className="w-full h-full object-cover"
+                  src="/biryani.jpg"
+                />
+              </div>
+            </div>
+
+            <div className="col-sm">
+              <div className="menu-links">
+                {menuLinks.map((item, i) => (
+                  <h1 key={i} className="link text-white">
+                    <Link
+                      ref={(el) => {
+                        if (el) menuLinkRefs.current[i] = el;
+                      }}
+                      href={item.href}
+                    >
+                      {item.label}
+                    </Link>
+                  </h1>
+                ))}
+              </div>
+
+              <div className="menu-socials">
+                {socialLinks.map((item, i) => (
+                  <div key={item.label} className="social text-white">
+                    <Link
+                      ref={(el) => {
+                        if (el) socialLinkRefs.current[i] = el;
+                      }}
+                      href={item.href}
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      {item.label}
+                    </Link>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="menu-footer">
+            <div className="col-lg text-white">
+              <Link href="/">Run</Link>
+            </div>
+            <div className="col-sm text-white">
+              <Link href="/">Jereshan</Link>
+              <Link href="/">Indian</Link>
+            </div>
+          </div>
         </div>
-      </NavbarMenu>
-    </HeroUINavbar>
+      </div>
+    </>
   );
 };

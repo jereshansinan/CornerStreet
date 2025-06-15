@@ -1,108 +1,118 @@
 /* eslint-disable prettier/prettier */
+import { logoData } from "./logo";
 import React from "react";
 import Image from "next/image";
 import { FaWhatsapp, FaInstagram, FaTiktok } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="px-2 md:px-32 py-6 md:py-16 bg-[#F1F0EF]">
-      {/* Logo */}
-      <div className="flex justify-center mb-8">
-        <Image
-          alt="Ntaba Ya Jozi Logo"
-          className="w-48 md:w-64"
-          height={100}
-          src="/NtabaLogo.png"
-          width={200}
-        />
-      </div>
+    <footer className="w-full bg-[#fef3c7] z-10">
+      <div className="flex flex-col h-full">
+        {/* Top Row */}
+        <div className="flex flex-col md:flex-row flex-[2] w-full">
+          {/* Left Block - Links */}
+          <div className="flex-1 border border-t-black p-2 md:p-4 flex flex-col">
+            <h2 className="text-base md:text-xl mb-4">Links</h2>
+            <nav className="flex flex-col space-y-2 text-black">
+              {[
+                { label: "Our Story", href: "#our-story" },
+                { label: "Our Mission", href: "#our-mission" },
+                { label: "How to Order", href: "#how-to-order" },
+                { label: "FAQ", href: "#faq" },
+                { label: "Menu", href: "/menu" },
+                { label: "Contact Us", href: "/contact-us" },
+              ].map((link, i) => (
+                <a key={i} className="hover:text-[#830323]" href={link.href}>
+                  <h1 className="text-xl md:text-6xl">{link.label}</h1>
+                </a>
+              ))}
+            </nav>
+          </div>
 
-      {/* Navigation Links */}
-      <div className="grid grid-cols-2 gap-4 md:flex md:justify-center md:space-x-4 md:space-y-0 mb-8">
-        <a
-          className="text-lg md:text-xl text-gray-700 hover:text-[#9E6137] text-center"
-          href="#our-story"
-        >
-          Our Story
-        </a>
-        <a
-          className="text-lg md:text-xl text-gray-700 hover:text-[#9E6137] text-center"
-          href="#our-mission"
-        >
-          Our Mission
-        </a>
-        <a
-          className="text-lg md:text-xl text-gray-700 hover:text-[#9E6137] text-center"
-          href="#how-to-order"
-        >
-          How to Order
-        </a>
-        <a
-          className="text-lg md:text-xl text-gray-700 hover:text-[#9E6137] text-center"
-          href="#faq"
-        >
-          FAQ
-        </a>
-        <a
-          className="text-lg md:text-xl text-gray-700 hover:text-[#9E6137] text-center"
-          href="/menu"
-        >
-          Menu
-        </a>
-        <a
-          className="text-lg md:text-xl text-gray-700 hover:text-[#9E6137] text-center"
-          href="/contact-us"
-        >
-          Contact Us
-        </a>
-      </div>
+          {/* Middle Block - Logo */}
+          <div className="flex-1 border border-black border-l-0 border-r-0 md:border-b-0 p-2 md:p-4 flex flex-col items-center justify-center text-center">
+            <div className="w-full flex items-center justify-center">
+              <svg
+                className="w-32 md:w-[200px] h-auto"
+                fill="black"
+                viewBox="0 0 432 282"
+              >
+                <path d={logoData} />
+              </svg>
+            </div>
+            <img
+              alt="image2"
+              className="max-w-[80%] h-auto rounded-none mt-4"
+              src="/top.png"
+            />
+          </div>
 
-      {/* Brown Line */}
-      <div className="h-1 bg-[#9E6137] my-8 rounded-lg" />
+          {/* Right Block - Contact Info */}
+          <div className="flex-1 border border-t-black p-2 md:p-4 flex flex-col">
+            <h2 className="text-base md:text-xl mb-4">Contact Us</h2>
 
-      {/* Social Media and Contact Info */}
-      <div className="flex flex-col md:flex-row justify-between items-center md:items-start space-y-8 md:space-y-0">
-        {/* Social Media */}
-        <div className="text-center md:text-left">
-          <h3 className="text-xl md:text-2xl font-semibold mb-4">Follow Us</h3>
-          <div className="flex space-x-4">
-            <a
-              className="text-black hover:text-[#9E6137]"
-              href="https://wa.me/0665104512?text=Hello%20there!%20I'm%20interested%20in%20your%20services."
-            >
-              <FaWhatsapp className="w-6 h-6" />
-            </a>
-            <a
-              className="text-black hover:text-[#9E6137]"
-              href="https://www.instagram.com/ntaba_ya_jozi?igsh=ZTZmZTA2MGgwbXg2"
-            >
-              <FaInstagram className="w-6 h-6" />
-            </a>
-            <a
-              className="text-black hover:text-[#9E6137]"
-              href="https://www.tiktok.com/@ntaba_ya_jozi?_t=ZN-8uNFmPEkAH0&_r=1"
-            >
-              <FaTiktok className="w-6 h-6" />
-            </a>
+            <div className="space-y-1 md:space-y-2 text-sm md:text-2xl">
+              <p>Phone: +27 61 490 7728</p>
+              <p>Email: info@indiansavourydelights.com</p>
+              <p>Venue: 123 place Street, Johannesburg</p>
+            </div>
+
+            <div className="my-4 md:my-6" />
+
+            <div className="space-y-1 md:space-y-2 text-sm md:text-2xl">
+              <p>Open: Wed – Sun</p>
+              <p>Hours: 10:00 AM – 6:00 PM</p>
+            </div>
           </div>
         </div>
 
-        <div className="text-center md:text-right">
-          <h3 className="text-xl md:text-2xl font-semibold mb-4">Contact Us</h3>
-          <p className="text-lg md:text-xl text-gray-700">
-            +27 66 510 4512 
-          </p>{" "}
-          <p className="text-lg md:text-xl text-gray-700">
-            info@ntabayojozi.com
-          </p>{" "}
+        {/* Bottom Row */}
+        <div className="flex flex-col md:flex-row flex-[1] w-full">
+          {/* Bottom Left - Quote */}
+          <div className="flex-1 border border-t-black p-2 md:p-4 flex items-center justify-center text-center text-gray-500">
+            <p className="text-sm md:text-sm italic text-black">
+              “Flavour is the essence of memory.”
+            </p>
+          </div>
+
+          {/* Bottom Middle - Copyright */}
+          <div className="flex-1 border text-black border-l-0 border-r-0 border-black border-b-0 p-4 flex items-center justify-center text-center text-sm">
+            © 2025 INDIAN SAVOURY DELIGHTS. All Rights Reserved.
+          </div>
+
+          {/* Bottom Right - Socials */}
+          <div className="flex-1 border border-t-black p-2 md:p-4 flex items-center justify-center">
+            <div className="flex space-x-4 text-black">
+              <a
+                className="hover:text-[#830323]"
+                href="https://wa.me/0665104512"
+              >
+                <FaWhatsapp className="w-5 h-5" />
+              </a>
+              <a
+                className="hover:text-[#830323]"
+                href="https://www.instagram.com/ntaba_ya_jozi"
+              >
+                <FaInstagram className="w-5 h-5" />
+              </a>
+              <a
+                className="hover:text-[#830323]"
+                href="https://www.tiktok.com/@ntaba_ya_jozi"
+              >
+                <FaTiktok className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <div className="h-1 bg-[#9E6137] my-8 rounded-lg" />
-
-      {/* Copyright */}
-      <div className="text-center text-lg md:text-xl text-gray-700">
-        © Copyright 2025. NTABA YA JOZI. All Rights Reserved.
+        {/* Bottom Image - Full Width, Half Screen Height */}
+        <div className="w-full h-[50vh]">
+          <img
+            alt="Bottom Visual"
+            className="w-full h-full object-cover"
+            src="/top.png"
+          />
+        </div>
       </div>
     </footer>
   );

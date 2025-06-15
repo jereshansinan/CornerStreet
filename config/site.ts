@@ -1,8 +1,8 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Ntaba ya Jozi",
-  description: "Best In Town",
+  name: "Indian Savoury Delights",
+  description: "Desc",
   navItems: [
     {
       label: "Our Story",

@@ -13,6 +13,31 @@ export const fontSans = localFont({
       weight: "700",
       style: "normal",
     },
+    {
+      path: "/../public/fonts/Dubiel.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "/../public/fonts/ginebrafont.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "/../public/fonts/HaarlemmerMTStdRegular.otf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "/../public/fonts/nourdregular.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "/../public/fonts/VogaMedium.otf",
+      weight: "700",
+      style: "normal",
+    },
   ],
   variable: "--font-sans",
 });

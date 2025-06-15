@@ -1,56 +1,103 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable prettier/prettier */
-import React from "react";
+"use client";
+
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
+const steps = [
+  {
+    id: 1,
+    title: "Text Us On WhatsApp",
+    description: "Send us a message with your order from our menu.",
+    image: "/bunny2.jpg",
+  },
+  {
+    id: 2,
+    title: "Let Us Know Your Preference",
+    description:
+      "Specify whether you'd like to pick up your order or have it delivered. If delivery, we'll arrange it for you.",
+    image: "/bunny2.jpg",
+  },
+  {
+    id: 3,
+    title: "Make Your Payment",
+    description:
+      "Pay via EFT, e-wallet, or choose to pay cash or card at collection.",
+    image: "/bunny2.jpg",
+  },
+];
 
 const HowToOrder = () => {
+  const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    if (window.innerWidth < 768) return;
+
+    cardsRef.current.forEach((card, index) => {
+      gsap.fromTo(
+        card,
+        { y: -50 },
+        {
+          y: 100,
+          scrollTrigger: {
+            trigger: card,
+            start: "top center",
+            end: "bottom center",
+            scrub: true,
+          },
+        }
+      );
+    });
+  }, []);
+
   return (
-    <section className="px-2 md:px-32 py-6 md:py-16" id="how-to-order">
-      {/* Section Heading */}
-      <div className="text-center mb-8 md:mb-16">
-        <div className="h-1 w-32 bg-[#9E6137] mb-2 rounded-lg mx-auto" />{" "}
-        {/* Thin brown line */}
-        <h2 className="text-3xl md:text-5xl font-bold">How to Order</h2>{" "}
+    <section className="relative overflow-hidden" id="how-to-order">
+      {/* Background Image Section */}
+      <div
+        className="w-full h-auto md:min-h-screen bg-center bg-cover bg-fixed relative flex flex-col items-center justify-center pb-12 pt-32"
+        style={{ backgroundImage: "url('/platters.jpg')" }}
+      >
+        {/* Dark Overlay */}
+        <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-0" />
+
         {/* Heading */}
-      </div>
-
-      {/* Steps Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {/* Step 1 */}
-        <div className="text-center">
-          <div className="text-6xl md:text-9xl font-bold text-[#9E6137] mb-4">
-            01
-          </div>
-          <h3 className="text-2xl md:text-3xl font-semibold mb-2">
-          Text Us On WhatsApp
-          </h3>
-          <p className="text-lg md:text-xl text-gray-600">
-          Send us a message with your order from our menu.
-          </p>
+        <div className="absolute top-10 w-full flex justify-center z-10">
+          <h1 className="text-white text-4xl md:text-6xl text-center drop-shadow-xl">
+            How to Order
+          </h1>
         </div>
 
-        {/* Step 2 */}
-        <div className="text-center">
-          <div className="text-6xl md:text-9xl font-bold text-[#9E6137] mb-4">
-            02
-          </div>
-          <h3 className="text-2xl md:text-3xl font-semibold mb-2">
-          Let Us Know Your Preference
-          </h3>
-          <p className="text-lg md:text-xl text-gray-600">
-             Specify whether you&apos;d like to pick up your order or have it delivered. If delivery, we&apos;ll arrange it for you.
-          </p>
-        </div>
-
-        {/* Step 3 */}
-        <div className="text-center">
-          <div className="text-6xl md:text-9xl font-bold text-[#9E6137] mb-4">
-            03
-          </div>
-          <h3 className="text-2xl md:text-3xl font-semibold mb-2">
-          Make Your Payment
-          </h3>
-          <p className="text-lg md:text-xl text-gray-600">
-          Pay via EFT, e-wallet, or choose to pay cash or card at collection.
-          </p>
+        {/* Centered Step Cards with GSAP Parallax */}
+        <div className="relative z-10 flex flex-col md:flex-row justify-center items-center gap-6 md:gap-10 px-4 md:px-24">
+          {steps.map((step, index) => (
+            <div
+              key={step.id}
+              ref={(el) => {
+                cardsRef.current[index] = el;
+              }}
+              className="bg-[#fef3c7] shadow-xl w-full max-w-[18rem] md:max-w-xs flex flex-col overflow-hidden"
+              style={{
+                marginTop: index === 0 ? 0 : undefined, // only stagger on md and up
+              }}
+            >
+              <img
+                alt={step.title}
+                className="w-full h-56 object-cover"
+                src={step.image}
+              />
+              <div className="p-6 flex flex-col justify-center text-center">
+                <h1 className="text-3xl font-bold mb-2 text-[#830323]">{`0${step.id}`}</h1>
+                <h3 className="text-xl font-semibold mb-2 text-black">
+                  {step.title}
+                </h3>
+                <p className="text-base text-black">{step.description}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

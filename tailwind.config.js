@@ -10,11 +10,23 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-sans)"],
-        mono: ["var(--font-mono)"],
+        sans: ['GlacialIndifference'],
       },
     },
   },
   darkMode: "class",
-  plugins: [heroui()],
+  plugins: [heroui({
+    themes: {
+        light: {
+          colors: {
+            background: "#FFFFFF", 
+            foreground: "#11181C",
+            primary: {
+              foreground: "#FFFFFF",
+              DEFAULT: "#006FEE",
+            },
+          },
+        },
+    }
+  })],
 }
