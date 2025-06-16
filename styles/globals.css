@@ -668,6 +668,10 @@ h1 span{
       z-index: 1000;
     }
 
+    .intro-logo{
+      font-size: 1rem;
+    }
+
     .link a::after,
     .social a::after,
     .menu-footer a::after{

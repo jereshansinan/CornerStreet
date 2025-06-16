@@ -44,7 +44,7 @@ const CateringSection = () => {
   return (
     <section
       ref={containerRef}
-      className="bg-[#fef3c7] text-black min-h-[50vh] flex flex-col md:flex-row items-center justify-between px-6 md:px-24 py-16 gap-5 md:gap-10"
+      className="bg-[#fef3c7] text-black min-h-[50vh] flex flex-col md:flex-row items-center justify-between px-6 md:px-24 py-16 gap-5 md:gap-10" id="catering"
     >
       {/* Left Side - Heading and Button */}
       <div className="w-full md:w-1/2 flex flex-col items-start gap-6">
