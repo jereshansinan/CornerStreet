@@ -201,7 +201,7 @@
 
 .gallery-item{
   flex: 0 1 400px;
-  height: 750px;
+  height: 80vh;
   margin: 0 5px;
   display: flex;
   justify-content: center;

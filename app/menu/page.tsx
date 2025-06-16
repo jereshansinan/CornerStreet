@@ -7,29 +7,31 @@ export default function MenuPage() {
   // Example menu data
   const menuSections = [
     {
-      id: "braai-ntaba",
-      title: "Braai Ntaba / Goat Meat",
+      id: "Other",
+      title: "Other",
       items: [
         {
           id: 1,
           image: "/samoosas.jpg",
-          title: "Special Order",
-          description: "Minimum 2kg Required",
-          price: "R900",
+          title: "Samoosas",
+          description: "Beef, Sweetcorn/Onion & Cheese, Chicken, Potato",
+          price: "R7",
         },
         {
           id: 2,
           image: "/biryani.jpg",
-          title: "Big Box",
-          description: "700g",
+          title: "Biryani",
+          description:
+            "Flavorful rice dish layered with chicken, aromatic spices, and herbs",
           price: "R300",
         },
         {
           id: 3,
           image: "/bunny2.jpg",
-          title: "1 person Box",
-          description: "350g + free sweet potatoes",
-          price: "R150",
+          title: "Beef Bunny Chow",
+          description:
+            "Beef curry served in a hollowed-out loaf of fresh bread",
+          price: "R85",
         },
       ],
     },
@@ -40,23 +42,26 @@ export default function MenuPage() {
         {
           id: 4,
           image: "/bunny3.jpg",
-          title: "Saucy Box",
-          description: "Goat meat in a spicy or mild sauce",
-          price: "R110",
+          title: "Beef Bunny Chow",
+          description:
+            "Beef curry served in a hollowed-out loaf of fresh bread",
+          price: "R85",
         },
         {
           id: 5,
-          image: "/bunnychow.jpg",
-          title: "Mogodu",
-          description: "Mabumu/Cow's Tripe",
-          price: "R220",
+          image: "/butterchicken.jpg",
+          title: "Butter Chicken & Naan",
+          description:
+            "Creamy tomato-based curry with tender chicken pieces, served with Naan",
+          price: "R90",
         },
         {
           id: 6,
-          image: "/butterchicken.jpg",
-          title: "Mogodu",
-          description: "Mabumu/Cow's Tripe",
-          price: "R220",
+          image: "/butterchickenrice.jpg",
+          title: "Butter Chicken & Rice",
+          description:
+            "Creamy tomato-based curry with tender chicken pieces, served with rice",
+          price: "R90",
         },
       ],
     },
@@ -67,24 +72,26 @@ export default function MenuPage() {
       items: [
         {
           id: 7,
-          image: "/butterchickenrice.jpg",
-          title: "Full Chicken",
-          description: "",
-          price: "R250",
+          image: "/curryNaan2.jpg",
+          title: "Beef Curry & Naan",
+          description: "Slow-cooked beef curry, served with Naan",
+          price: "R85",
         },
         {
           id: 8,
-          image: "/butterrice2.jpg",
-          title: "1/2 Chicken",
-          description: "",
-          price: "R130",
+          image: "/tacos.jpg",
+          title: "Vegan Taco",
+          description:
+            "Soft taco shells filled with falafals, and savoury fillings and veggies.",
+          price: "R75",
         },
         {
           id: 9,
-          image: "/butterrice3.jpg",
-          title: "1/2 Chicken",
-          description: "",
-          price: "R130",
+          image: "/tacos2.jpg",
+          title: "Beef Taco",
+          description:
+            "Seasoned ground beef in taco shells, topped with savoury fillings and veggies",
+          price: "R75",
         },
       ],
     },
@@ -94,24 +101,27 @@ export default function MenuPage() {
       items: [
         {
           id: 10,
-          image: "/curry3.jpg",
-          title: "Fumbwa",
-          description: "Wild Spinach",
-          price: "R90",
+          image: "/tacos3.jpg",
+          title: "Chicken Taco",
+          description:
+            "Tender spiced chicken served in taco shells, topped with savoury fillings and veggies",
+          price: "R75",
         },
         {
           id: 11,
-          image: "/curryNaan.jpg",
-          title: "Spinach",
-          description: "",
-          price: "R80",
+          image: "/wrap.jpg",
+          title: "Chicken Wrap",
+          description:
+            "Tender Chicken wrapped in a soft roti with fresh salad and sauces",
+          price: "R75",
         },
         {
           id: 12,
-          image: "/curryNaan2.jpg",
-          title: "Pondu",
-          description: "Cassava Leaves",
-          price: "R80",
+          image: "/wrap2.jpg",
+          title: "Beef Wrap",
+          description:
+            "Ground Beef wrapped in a soft roti with fresh salad and sauces",
+          price: "75",
         },
       ],
     },
@@ -121,65 +131,11 @@ export default function MenuPage() {
       items: [
         {
           id: 13,
-          image: "/samoosas2.jpg",
-          title: "Fried or Boiled Plantains",
-          description: "",
-          price: "R30",
-        },
-        {
-          id: 14,
-          image: "/tacos.jpg",
-          title: "Pap",
-          description: "Fufu",
-          price: "R25",
-        },
-        {
-          id: 15,
-          image: "/tacos2.jpg",
-          title: "Kwanga",
-          description: "Cassava Bread",
-          price: "R25",
-        },
-        {
-          id: 16,
-          image: "/tacos3.jpg",
-          title: "Fried or Boiled Sweet Potatoes",
-          description: "",
-          price: "R25",
-        },
-        {
-          id: 17,
-          image: "/wrap.jpg",
-          title: "Green Chilli",
-          description: "For seafood delights",
-          price: "R105",
-        },
-        {
-          id: 18,
-          image: "/wrap2.jpg",
-          title: "Red Chilli",
-          description: "For red meat dishes",
-          price: "R105",
-        },
-      ],
-    },
-    {
-      id: "sauces",
-      title: "Sauces (250 ML)",
-      items: [
-        {
-          id: 19,
-          image: "/orange.jpg",
-          title: "Orange Chilli",
-          description: "For game/red meat, sandwiches etc.",
-          price: "R105",
-        },
-        {
-          id: 20,
-          image: "/GreenSauce.jpg",
-          title: "Green Sauces",
-          description: "For any meat, mild",
-          price: "R110",
+          image: "/platters.jpg",
+          title: "Custom Platters",
+          description:
+            "Build your own platter with a selection of your favorite savoury items, perfect for any occasion.",
+          price: "R250 – R1200 depending on size and selection.",
         },
       ],
     },
@@ -233,7 +189,10 @@ export default function MenuPage() {
 
                   {/* Content */}
                   <div className="flex flex-col gap-[80px]">
-                    <h3 className="text-base text-white">{item.title}</h3>
+                    <div className="flex justify-between items-center">
+                      <h3 className="text-base text-white">{item.title}</h3>
+                      <span className="text-base text-white">{item.price}</span>
+                    </div>
                     <p className="text-base text-[#666666] font-sans">
                       {item.description}
                     </p>

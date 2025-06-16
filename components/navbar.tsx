@@ -9,7 +9,6 @@ import NextLink from "next/link";
 import clsx from "clsx";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { Image } from "@heroui/image";
 import gsap from "gsap";
 
 const menuLinks = [
@@ -20,7 +19,6 @@ const menuLinks = [
 ];
 
 const socialLinks = [
-  { label: "behance", href: "https://www.behance.net" },
   { label: "instagram", href: "https://www.instagram.com" },
   { label: "linkedin", href: "https://www.linkedin.com" },
   { label: "facebook", href: "https://www.facebook.com" },
@@ -250,7 +248,7 @@ export const Navbar = () => {
           </div>
 
           {/* Logo in center */}
-          <NavbarBrand className="flex-1 flex justify-center md:justify-center">
+          <NavbarBrand className="md:hidden flex-1 flex justify-center">
             <NextLink className="flex justify-center items-center" href="/">
               <h1
                 className={clsx(
@@ -264,6 +262,21 @@ export const Navbar = () => {
               </h1>
             </NextLink>
           </NavbarBrand>
+
+          <NavbarContent className="hidden md:flex" justify="center">
+            <NavbarBrand>
+              <NextLink className="flex justify-center items-center" href="/">
+                <h1
+                  className={clsx(
+                    "text-base md:text-3xl leading-tight break-words max-w-[160px] md:max-w-none",
+                    scrolled ? "text-black" : "text-white"
+                  )}
+                >
+                  INDIAN SAVOURY DELIGHTS
+                </h1>
+              </NextLink>
+            </NavbarBrand>
+          </NavbarContent>
 
           {/* Hamburger button on right */}
           <div className="md:hidden">
@@ -316,7 +329,7 @@ export const Navbar = () => {
       <div ref={menuOverlayRef} className="menu-overlay px-4 md:px-12">
         <button
           className={clsx(
-            "absolute top-4 right-[4rem] z-50 w-12 h-12 rounded-full flex items-center justify-center border backdrop-blur-md transition-colors duration-300",
+            "absolute top-6 right-6 z-50 w-10 h-10 rounded-full flex items-center justify-center border backdrop-blur-md transition-colors duration-300",
             "border-white text-white hover:bg-[#fef3c7] hover:text-black hover:border-[#fef3c7]"
           )}
           onClick={handleMenuClick}
@@ -340,10 +353,11 @@ export const Navbar = () => {
                 {menuLinks.map((item, i) => (
                   <h1 key={i} className="link text-white">
                     <Link
-                      ref={(el) => {
+                    ref={(el) => {
                         if (el) menuLinkRefs.current[i] = el;
                       }}
                       href={item.href}
+                      onClick={closeMenu}
                     >
                       {item.label}
                     </Link>

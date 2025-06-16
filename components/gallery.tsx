@@ -70,7 +70,7 @@ const OurValues = () => {
   }, []);
 
   return (
-    <section className=" relative px-2 md:px-32 py-6 md:py-16 bg-[#1D1D1B]">
+    <section className=" relative px-2 md:px-32 py-6 md:py-6 bg-[#1D1D1B]" id="gallery">
       <div className="absolute whitespace-nowrap z-0 pointer-events-none animate-scrollText pl-[100vw] hidden md:flex items-center overflow-hidden">
         <h1 className="text-[20vw] md:text-[40vw] text-[#fef3c7]">
           GALLERY • GALLERY • GALLERY • GALLERY • GALLERY • GALLERY • GALLERY •
@@ -89,7 +89,7 @@ const OurValues = () => {
               ref={(el) => {
                 if (el) galleryItemsRef.current[index] = el;
               }}
-              className="gallery-item flex justify-center items-center flex-[0_1_20px] h-[700px] md:h-[1100px] mx-2 md:mx-[5px] bg-black overflow-hidden transition-[flex] duration-1000"
+              className="gallery-item flex justify-center items-center flex-[0_1_20px] mx-2 md:mx-[5px] bg-black overflow-hidden transition-[flex] duration-1000"
             >
               <img
                 alt={`Gallery ${index}`}

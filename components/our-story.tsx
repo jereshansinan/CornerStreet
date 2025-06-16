@@ -5,8 +5,6 @@ import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import Copy from "@/components/Copy";
-
 const OurStory = () => {
   const firstImageRef = useRef(null);
   const secondImageRef = useRef(null);
@@ -15,18 +13,6 @@ const OurStory = () => {
 
   useLayoutEffect(() => {
     if (!firstImageRef.current || !secondImageRef.current) return;
-
-    // First Image Parallax
-    gsap.to(firstImageRef.current, {
-      yPercent: -20,
-      ease: "none",
-      scrollTrigger: {
-        trigger: firstImageRef.current,
-        start: "top bottom",
-        end: "bottom top",
-        scrub: true,
-      },
-    });
 
     // Second Image Parallax
     gsap.to(secondImageRef.current, {
@@ -49,68 +35,59 @@ const OurStory = () => {
       {/* Left Side - Text Section */}
       <div className="w-full md:w-1/2 flex flex-col justify-between">
         <div className="mb-2 md:mb-4">
-          <Copy delay={0.5}>
-            <h1 className="text-2xl md:text-6xl mb-1 md:mb-4">Who We Are</h1>
-          </Copy>
+          <h1 className="text-2xl md:text-6xl mb-1 md:mb-4">Who We Are</h1>
         </div>
-        <Copy delay={0.5}>
-          <p className="text-base md:text-xl">
-            Nestled in the vibrant heart of Pretoria, our kitchen was born out
-            of a deep love for authentic Indian cuisine and a desire to share it
-            with our local community. What began as a family tradition filled
-            with rich spices, slow cooked curries, and recipes passed down
-            through generations soon blossomed into a passion to bring true
-            Indian flavors to the city we call home.
-          </p>
-        </Copy>
-        <Copy delay={0.5}>
-          <p className="hidden md:flex text-base md:text-xl">
-            Our journey is rooted in honoring tradition while embracing
-            creativity. Every dish we serve is handcrafted with care, using
-            carefully selected ingredients that reflect the diversity and soul
-            of Indian cooking. From fragrant biryanis and buttery naans to our
-            signature curries, we strive to offer an experience that feels both
-            comforting and exciting—something that tastes like home, no matter
-            where you&apos;re from.
-          </p>
-        </Copy>
-        <Copy delay={0.5}>
-          <p className="text-base md:text-xl mt-2 md:mt-0">
-            As proud members of the South African community, we believe food is
-            a powerful way to connect people. Whether you&apos;re discovering
-            Indian food for the first time or seeking the familiar warmth of
-            your childhood meals, we invite you to join us at the table. Because
-            here, every meal is more than just a dish, it’s a story, a memory,
-            and a celebration of culture.
-          </p>
-        </Copy>
+        <p className="text-base md:text-xl">
+          Nestled in the vibrant heart of Pretoria, our kitchen was born out of
+          a deep love for authentic Indian cuisine and a desire to share it with
+          our local community. What began as a family tradition filled with rich
+          spices, slow cooked curries, and recipes passed down through
+          generations soon blossomed into a passion to bring true Indian flavors
+          to the city we call home.
+        </p>
+        <p className="hidden md:flex text-base md:text-xl">
+          Our journey is rooted in honoring tradition while embracing
+          creativity. Every dish we serve is handcrafted with care, using
+          carefully selected ingredients that reflect the diversity and soul of
+          Indian cooking. From fragrant biryanis and buttery naans to our
+          signature curries, we strive to offer an experience that feels both
+          comforting and exciting—something that tastes like home, no matter
+          where you&apos;re from.
+        </p>
+        <p className="text-base md:text-xl mt-2 md:mt-0">
+          As proud members of the South African community, we believe food is a
+          powerful way to connect people. Whether you&apos;re discovering Indian
+          food for the first time or seeking the familiar warmth of your
+          childhood meals, we invite you to join us at the table. Because here,
+          every meal is more than just a dish, it’s a story, a memory, and a
+          celebration of culture.
+        </p>
       </div>
 
       {/* Right Side - Images */}
       <div className="w-full md:w-1/2 h-full relative">
         {/* First Image - Parallax */}
-        <div className="relative w-full h-[400px] md:h-[800px] overflow-hidden">
+        <div className="relative w-full h-[25rem] md:h-[50rem] overflow-hidden">
           <Image
-            ref={firstImageRef}
             alt="Our Story Image"
-            className="absolute top-0 left-0 w-full h-auto object-cover  rounded-none will-change-transform"
-            height={1000}
+            className="absolute top-0 left-0 w-full h-auto object-cover rounded-none will-change-transform"
+            height={62.5 * 16} // 1000px equivalent
             src="/side.png"
-            width={800}
+            width={50 * 16} // 800px equivalent
           />
         </div>
 
         {/* Second Image - Overlapping Parallax */}
         <div
           ref={secondImageRef}
-          className="absolute top-1/3 md:top-1/2 left-[30%] md:left-[65%] -translate-y-1/2 z-10 w-[250px] md:w-[400px] h-[200px] md:h-full"
+          className="absolute top-1/3 md:top-1/2 left-[30%] md:left-[55%] -translate-y-1/2 z-10 hidden md:flex md:w-[25rem] h-[12.5rem] md:h-full"
           id="parallax-image"
         >
           <Image
             alt="Overlay Image"
             className="w-full h-auto object-cover shadow-xl rounded-none will-change-transform"
             src="/biryani.jpg"
-            width={600}
+            width={37.5 * 16} // 600px equivalent
           />
         </div>
       </div>

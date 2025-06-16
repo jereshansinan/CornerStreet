@@ -1,8 +1,8 @@
 /* eslint-disable prettier/prettier */
-import { logoData } from "./logo";
 import React from "react";
-import Image from "next/image";
 import { FaWhatsapp, FaInstagram, FaTiktok } from "react-icons/fa";
+
+import { logoData } from "./logo";
 
 const Footer = () => {
   return (
@@ -11,12 +11,12 @@ const Footer = () => {
         {/* Top Row */}
         <div className="flex flex-col md:flex-row flex-[2] w-full">
           {/* Left Block - Links */}
-          <div className="flex-1 border border-t-black p-2 md:p-4 flex flex-col">
+          <div className="flex-1 border-black border-t-1 border-l-0 border-r-0 md:border-r-0 md:border-l-0 p-2 md:p-4 flex flex-col">
             <h2 className="text-base md:text-xl mb-4">Links</h2>
             <nav className="flex flex-col space-y-2 text-black">
               {[
                 { label: "Our Story", href: "#our-story" },
-                { label: "Our Mission", href: "#our-mission" },
+                { label: "Gallery", href: "#gallery" },
                 { label: "How to Order", href: "#how-to-order" },
                 { label: "FAQ", href: "#faq" },
                 { label: "Menu", href: "/menu" },
@@ -30,7 +30,7 @@ const Footer = () => {
           </div>
 
           {/* Middle Block - Logo */}
-          <div className="flex-1 border border-black border-l-0 border-r-0 md:border-b-0 p-2 md:p-4 flex flex-col items-center justify-center text-center">
+          <div className="flex-1 border border-black border-l-0 border-r-0 border-b-0 md:border-r-0 md:border-l-1 p-2 md:p-4 flex flex-col items-center justify-center text-center">
             <div className="w-full flex items-center justify-center">
               <svg
                 className="w-32 md:w-[200px] h-auto"
@@ -48,7 +48,7 @@ const Footer = () => {
           </div>
 
           {/* Right Block - Contact Info */}
-          <div className="flex-1 border border-t-black p-2 md:p-4 flex flex-col">
+          <div className="flex-1 border border-black border-t-1 border-r-0 border-l-0 border-b-0 md:border-r-0 md:border-l-1 p-2 md:p-4 flex flex-col">
             <h2 className="text-base md:text-xl mb-4">Contact Us</h2>
 
             <div className="space-y-1 md:space-y-2 text-sm md:text-2xl">
@@ -69,19 +69,19 @@ const Footer = () => {
         {/* Bottom Row */}
         <div className="flex flex-col md:flex-row flex-[1] w-full">
           {/* Bottom Left - Quote */}
-          <div className="flex-1 border border-t-black p-2 md:p-4 flex items-center justify-center text-center text-gray-500">
+          <div className="flex-1 border-black border-t-1 p-2 md:p-4 flex items-center justify-center text-center text-gray-500">
             <p className="text-sm md:text-sm italic text-black">
               “Flavour is the essence of memory.”
             </p>
           </div>
 
           {/* Bottom Middle - Copyright */}
-          <div className="flex-1 border text-black border-l-0 border-r-0 border-black border-b-0 p-4 flex items-center justify-center text-center text-sm">
+          <div className="flex-1 border-black border-t-1 text-black border-l-0 border-r-0 border-b-0 md:border-r-1 md:border-l-1 p-4 flex items-center justify-center text-center text-sm">
             © 2025 INDIAN SAVOURY DELIGHTS. All Rights Reserved.
           </div>
 
           {/* Bottom Right - Socials */}
-          <div className="flex-1 border border-t-black p-2 md:p-4 flex items-center justify-center">
+          <div className="flex-1 border-black border-t-1 p-2 md:p-4 flex items-center justify-center">
             <div className="flex space-x-4 text-black">
               <a
                 className="hover:text-[#830323]"
