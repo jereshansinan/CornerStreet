@@ -69,7 +69,7 @@ export default function ContactPage() {
               alt="Contact Us"
               className="w-full h-full object-cover"
               height={0}
-              src="/top2.png"
+              src="/side4.png"
               style={{ height: "100%" }}
               width={1000}
             />

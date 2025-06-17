@@ -110,7 +110,7 @@ const Footer = () => {
           <img
             alt="Bottom Visual"
             className="w-full h-full object-cover"
-            src="/top.png"
+            src="/spicestop.png"
           />
         </div>
       </div>

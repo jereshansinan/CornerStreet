@@ -1,6 +1,6 @@
 "use client";
 import { Image } from "@heroui/image";
-import { useEffect, useRef, useState } from "react";
+
 import Lenis from "@/components/lenis";
 
 export default function MenuPage() {
@@ -14,21 +14,24 @@ export default function MenuPage() {
           id: 1,
           image: "/samoosas.jpg",
           title: "Samoosas",
+          hoverImage: "/samoosas2.jpg",
           description: "Beef, Sweetcorn/Onion & Cheese, Chicken, Potato",
           price: "R7",
         },
         {
           id: 2,
-          image: "/biryani.jpg",
-          title: "Biryani",
+          image: "/springroll.png",
+          title: "Spring Rolls",
+          hoverImage: "/springroll2.png",
           description:
-            "Flavorful rice dish layered with chicken, aromatic spices, and herbs",
-          price: "R300",
+            "Build your own platter with a selection of your favorite savoury items, perfect for any occasion.",
+          price: "R8",
         },
         {
           id: 3,
           image: "/bunny2.jpg",
           title: "Beef Bunny Chow",
+          hoverImage: "/bunnychow.jpg",
           description:
             "Beef curry served in a hollowed-out loaf of fresh bread",
           price: "R85",
@@ -58,6 +61,7 @@ export default function MenuPage() {
         {
           id: 6,
           image: "/butterchickenrice.jpg",
+          hoverImage: "/butterrice2.jpg",
           title: "Butter Chicken & Rice",
           description:
             "Creamy tomato-based curry with tender chicken pieces, served with rice",
@@ -74,6 +78,7 @@ export default function MenuPage() {
           id: 7,
           image: "/curryNaan2.jpg",
           title: "Beef Curry & Naan",
+          hoverImage: "/curryNaan.jpg",
           description: "Slow-cooked beef curry, served with Naan",
           price: "R85",
         },
@@ -131,6 +136,15 @@ export default function MenuPage() {
       items: [
         {
           id: 13,
+          image: "/biryani3.png",
+          title: "Biryani",
+          hoverImage: "/biryani2.png",
+          description:
+            "Flavorful rice dish layered with chicken, aromatic spices, and herbs",
+          price: "R300",
+        },
+        {
+          id: 14,
           image: "/platters.jpg",
           title: "Custom Platters",
           description:
@@ -175,17 +189,44 @@ export default function MenuPage() {
                   className="border border-[#555555] bg-[#1D1D1B] text-white overflow-hidden p-[8px]"
                 >
                   {/* Image */}
-                  <div className="w-full h-[350px] relative mb-[8px]">
-                    <Image
-                      isZoomed
-                      alt={item.title}
-                      className="object-cover !rounded-none w-full"
-                      height={350}
-                      radius="none"
-                      src={item.image}
-                      width="100%"
-                    />
-                  </div>
+                  {item.hoverImage ? (
+                    <div className="relative w-full h-[350px] mb-2 group overflow-hidden">
+                      {/* Default Image */}
+                      <div className="absolute inset-0 transition-opacity duration-[1s] ease-in-out group-hover:opacity-0">
+                        <Image
+                          alt={item.title}
+                          className="object-cover w-full h-full !rounded-none"
+                          height={350}
+                          src={item.image}
+                          width="100%"
+                        />
+                      </div>
+
+                      {/* Hover Image (conditionally shown if exists) */}
+                      {item.hoverImage && (
+                        <div className="absolute inset-0 opacity-0 transition-opacity duration-[1s] ease-in-out group-hover:opacity-100">
+                          <Image
+                            alt={`${item.title} Hover`}
+                            className="object-cover w-full h-full !rounded-none"
+                            height={350}
+                            src={item.hoverImage}
+                            width="100%"
+                          />
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <div className="w-full h-[350px] mb-2">
+                      <Image
+                        isZoomed
+                        alt={item.title}
+                        className="object-cover w-full h-full !rounded-none"
+                        height={350}
+                        src={item.image}
+                        width="100%"
+                      />
+                    </div>
+                  )}
 
                   {/* Content */}
                   <div className="flex flex-col gap-[80px]">

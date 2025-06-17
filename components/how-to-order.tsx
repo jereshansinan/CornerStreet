@@ -13,21 +13,21 @@ const steps = [
     id: 1,
     title: "Text Us On WhatsApp",
     description: "Send us a message with your order from our menu.",
-    image: "/bunny2.jpg",
+    image: "/whatsapp.png",
   },
   {
     id: 2,
     title: "Let Us Know Your Preference",
     description:
       "Specify whether you'd like to pick up your order or have it delivered. If delivery, we'll arrange it for you.",
-    image: "/bunny2.jpg",
+    image: "/app1.png",
   },
   {
     id: 3,
     title: "Make Your Payment",
     description:
       "Pay via EFT, e-wallet, or choose to pay cash or card at collection.",
-    image: "/bunny2.jpg",
+    image: "/pay.png",
   },
 ];
 
