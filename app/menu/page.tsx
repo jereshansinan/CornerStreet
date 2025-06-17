@@ -126,7 +126,7 @@ export default function MenuPage() {
           title: "Beef Wrap",
           description:
             "Ground Beef wrapped in a soft roti with fresh salad and sauces",
-          price: "75",
+          price: "R75",
         },
       ],
     },

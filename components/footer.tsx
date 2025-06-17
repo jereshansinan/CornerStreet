@@ -52,9 +52,9 @@ const Footer = () => {
             <h2 className="text-base md:text-xl mb-4">Contact Us</h2>
 
             <div className="space-y-1 md:space-y-2 text-sm md:text-2xl">
-              <p>Phone: +27 61 490 7728</p>
-              <p>Email: info@indiansavourydelights.com</p>
-              <p>Venue: 123 place Street, Johannesburg</p>
+              <p>Phone: +27 82 634 6436</p>
+              <p>Email: enquiry.indiansavourydelights@gmail.com</p>
+              <p>Venue: Pretoria</p>
             </div>
 
             <div className="my-4 md:my-6" />
@@ -85,19 +85,19 @@ const Footer = () => {
             <div className="flex space-x-4 text-black">
               <a
                 className="hover:text-[#830323]"
-                href="https://wa.me/0665104512"
+                href="https://wa.me/0826346436"
               >
                 <FaWhatsapp className="w-5 h-5" />
               </a>
               <a
                 className="hover:text-[#830323]"
-                href="https://www.instagram.com/ntaba_ya_jozi"
+                href="https://www.instagram.com/"
               >
                 <FaInstagram className="w-5 h-5" />
               </a>
               <a
                 className="hover:text-[#830323]"
-                href="https://www.tiktok.com/@ntaba_ya_jozi"
+                href="https://www.tiktok.com/"
               >
                 <FaTiktok className="w-5 h-5" />
               </a>
