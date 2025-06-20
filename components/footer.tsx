@@ -51,7 +51,7 @@ const Footer = () => {
           <div className="flex-1 border border-black border-t-1 border-r-0 border-l-0 border-b-0 md:border-r-0 md:border-l-1 p-2 md:p-4 flex flex-col">
             <h2 className="text-base md:text-xl mb-4">Contact Us</h2>
 
-            <div className="space-y-1 md:space-y-2 text-sm md:text-2xl">
+            <div className="space-y-1 md:space-y-2 text-sm md:text-xl">
               <p>Phone: +27 82 634 6436</p>
               <p>Email: enquiry.indiansavourydelights@gmail.com</p>
               <p>Venue: Pretoria</p>
@@ -59,7 +59,7 @@ const Footer = () => {
 
             <div className="my-4 md:my-6" />
 
-            <div className="space-y-1 md:space-y-2 text-sm md:text-2xl">
+            <div className="space-y-1 md:space-y-2 text-sm md:text-xl">
               <p>Open: Wed – Sun</p>
               <p>Hours: 10:00 AM – 6:00 PM</p>
             </div>

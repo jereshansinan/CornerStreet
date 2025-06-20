@@ -59,7 +59,7 @@ const HowToOrder = () => {
       {/* Background Image Section */}
       <div
         className="w-full h-auto md:min-h-screen bg-center bg-cover bg-fixed relative flex flex-col items-center justify-center pb-12 pt-32"
-        style={{ backgroundImage: "url('/platters.jpg')" }}
+        style={{ backgroundImage: "url('/top4.png')" }}
       >
         {/* Dark Overlay */}
         <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-0" />

@@ -52,7 +52,7 @@ export default function ContactPage() {
     <Lenis>
       {/* Hero Section */}
       <section className="hero-section flex flex-col items-center justify-center gap-4 py-8 md:py-10 relative">
-        <div className="absolute inset-0 bg-black opacity-20" />
+        <div className="absolute inset-0 bg-[#1D1D1B] opacity-20" />
         <div className="inline-block max-w-xl text-center relative z-10">
           <h1 className="text-4xl md:text-6xl text-white leading-tight">
             Contact Us
@@ -61,7 +61,7 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Form Section */}
-      <section className="h-auto md:h-[100vh] px-2 md:px-0 bg-[#fef3c7]">
+      <section className="h-auto md:h-auto px-2 md:px-0 bg-[#1D1D1B]">
         <div className="grid grid-cols-1 md:grid-cols-3 h-full">
           {/* Left Side: Image */}
           <div className="hidden md:block col-span-2 py-2">
@@ -76,7 +76,7 @@ export default function ContactPage() {
           </div>
 
           {/* Right Side: Form */}
-          <div className="flex flex-col justify-center bg-[#fef3c7] text-black px-6 md:px-10 py-6 md:py-8 h-full">
+          <div className="flex flex-col justify-center bg-[#1D1D1B] text-white px-6 md:px-10 py-6 md:py-8 h-full">
             <h1 className="text-3xl md:text-4xl font-bold mb-4">
               Leave Us A Message
             </h1>
@@ -88,14 +88,14 @@ export default function ContactPage() {
               {/* Full Name */}
               <div className="w-full">
                 <label
-                  className="block mb-2 text-sm font-medium text-black !bg-transparent"
+                  className="block mb-2 text-sm font-medium text-white !bg-transparent"
                   htmlFor="name"
                 >
                   Full Name
                 </label>
                 <input
                   required
-                  className="w-full h-14 px-4 border border-black rounded-md bg-[#fef6d4] text-black"
+                  className="w-full h-14 px-4 border border-white rounded-md bg-[#fef6d4] text-white"
                   id="name"
                   name="name"
                   placeholder="Enter your full name"
@@ -108,14 +108,14 @@ export default function ContactPage() {
               {/* Email */}
               <div className="w-full">
                 <label
-                  className="block mb-2 text-sm font-medium text-black !bg-transparent"
+                  className="block mb-2 text-sm font-medium text-white !bg-transparent"
                   htmlFor="email"
                 >
                   Email
                 </label>
                 <input
                   required
-                  className="w-full h-14 px-4 border border-black rounded-md bg-[#fef6d4] text-black"
+                  className="w-full h-14 px-4 border border-white rounded-md bg-[#fef6d4] text-white"
                   id="email"
                   name="email"
                   placeholder="Enter your email"
@@ -128,14 +128,14 @@ export default function ContactPage() {
               {/* Phone Number */}
               <div className="w-full">
                 <label
-                  className="block mb-2 text-sm font-medium text-black !bg-transparent"
+                  className="block mb-2 text-sm font-medium text-white !bg-transparent"
                   htmlFor="phone"
                 >
                   Phone Number
                 </label>
                 <input
                   required
-                  className="w-full h-14 px-4 border border-black rounded-md bg-[#fef6d4] text-black"
+                  className="w-full h-14 px-4 border border-white rounded-md bg-[#fef6d4] text-white"
                   id="phone"
                   name="phone"
                   placeholder="Enter your phone number"
@@ -148,14 +148,14 @@ export default function ContactPage() {
               {/* Message */}
               <div className="w-full">
                 <label
-                  className="block mb-2 text-sm font-medium text-black !bg-transparent"
+                  className="block mb-2 text-sm font-medium text-white !bg-transparent"
                   htmlFor="message"
                 >
                   Message
                 </label>
                 <input
                   required
-                  className="w-full h-28 px-4 py-2 border border-black rounded-md bg-[#fef6d4] text-black resize-none"
+                  className="w-full h-28 px-4 py-2 border border-white rounded-md bg-[#fef6d4] text-white resize-none"
                   id="message"
                   name="message"
                   placeholder="Enter your message"
@@ -164,11 +164,11 @@ export default function ContactPage() {
                 />
               </div>
 
-              <hr className="border-t border-black my-4" />
+              <hr className="border-t border-white my-4" />
 
               {/* Submit Button */}
               <button
-                className="w-full h-14 text-lg bg-black text-white hover:bg-[#830323] transition-colors"
+                className="w-full h-14 text-lg bg-white text-black hover:text-white hover:bg-[#830323] transition-colors"
                 disabled={loading}
                 type="submit"
               >

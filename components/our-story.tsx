@@ -29,7 +29,7 @@ const OurStory = () => {
 
   return (
     <section
-      className="px-2 md:px-24 py-6 md:py-16 flex flex-col md:flex-row items-start md:items-stretch gap-2 md:gap-24"
+      className="px-2 md:px-24 py-6 md:py-16 flex flex-col md:flex-row items-start md:items-stretch gap-2 md:gap-24 md:min-h-screen"
       id="our-story"
     >
       {/* Left Side - Text Section */}
@@ -65,14 +65,13 @@ const OurStory = () => {
       </div>
 
       {/* Right Side - Images */}
-      <div className="w-full md:w-1/2 h-full relative">
-        {/* First Image - Parallax */}
-        <div className="relative w-full h-[25rem] md:h-[50rem] overflow-hidden">
+      <div className="w-full md:w-1/2 h-full relative flex items-center">
+        <div className="relative w-full h-[25rem] md:h-[40rem] overflow-hidden">
           <Image
             alt="Our Story Image"
             className="absolute top-0 left-0 w-full h-auto object-cover rounded-none will-change-transform"
             height={62.5 * 16} // 1000px equivalent
-            src="/side.png"
+            src="/side4.png"
             width={50 * 16} // 800px equivalent
           />
         </div>
@@ -80,13 +79,13 @@ const OurStory = () => {
         {/* Second Image - Overlapping Parallax */}
         <div
           ref={secondImageRef}
-          className="absolute top-1/3 md:top-1/2 left-[30%] md:left-[55%] -translate-y-1/2 z-10 hidden md:flex md:w-[25rem] h-[12.5rem] md:h-full"
+          className="absolute top-1/3 md:top-[10%] left-[30%] md:left-[40%] z-10 hidden md:flex md:w-[25rem] h-[10rem] md:h-full"
           id="parallax-image"
         >
           <Image
             alt="Overlay Image"
             className="w-full h-auto object-cover shadow-xl rounded-none will-change-transform"
-            src="/biryani.jpg"
+            src="/biryani2.png"
             width={37.5 * 16} // 600px equivalent
           />
         </div>
