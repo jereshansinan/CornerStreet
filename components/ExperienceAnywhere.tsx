@@ -48,18 +48,17 @@ const ExperienceAnywhere = () => {
     >
       {/* Left Side - Heading and Button */}
       <div className="w-full md:w-1/2 flex flex-col items-start gap-6">
-        <h1
-          ref={headingRef}
-          className="text-3xl md:text-5xl leading-tight"
-        >
+        <h1 ref={headingRef} className="text-3xl md:text-5xl leading-tight">
           Food, Wherever You Are
         </h1>
         <Link
           ref={buttonRef}
           className="px-6 py-4 border-1 border-black text-black rounded-full hover:bg-[#830323] transition hover:border-[#830323] hover:text-white"
-          href="#menu"
+          href="/Indian Savoury Delights Menu.pdf"
+          rel="noopener noreferrer"
+          target="_blank"
         >
-          View Menu
+          Download Menu
         </Link>
       </div>
 

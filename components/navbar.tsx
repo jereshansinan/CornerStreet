@@ -19,9 +19,15 @@ const menuLinks = [
 ];
 
 const socialLinks = [
-  { label: "instagram", href: "https://www.instagram.com" },
+  {
+    label: "instagram",
+    href: "https://www.instagram.com/indiansavourydelights/",
+  },
   { label: "linkedin", href: "https://www.linkedin.com" },
-  { label: "facebook", href: "https://www.facebook.com" },
+  {
+    label: "facebook",
+    href: "https://www.facebook.com/indiansavourydelights/",
+  },
 ];
 
 export const Navbar = () => {
@@ -210,15 +216,15 @@ export const Navbar = () => {
         maxWidth="full"
       >
         {/* Left - Social Icons */}
-        <NavbarContent className="px-4 md:px-12 hidden md:flex" justify="start">
+        <NavbarContent className="hidden md:flex" justify="start">
           <div
             className={clsx(
-              "flex items-center gap-3",
+              "flex items-center gap-1 sm:gap-1 md:gap-2 lg:gap-4",
               scrolled ? "text-black" : "text-white"
             )}
           >
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/indiansavourydelights/"
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -268,7 +274,7 @@ export const Navbar = () => {
               <NextLink className="flex justify-center items-center" href="/">
                 <h1
                   className={clsx(
-                    "text-base md:text-3xl leading-tight break-words max-w-[160px] md:max-w-none",
+                    "text-base sm:text-lg md:text-2xl lg:text-2xl xl:text-4xl leading-tight break-words max-w-[160px] sm:max-w-[200px] md:max-w-none",
                     scrolled ? "text-black" : "text-white"
                   )}
                 >
@@ -296,11 +302,14 @@ export const Navbar = () => {
         </NavbarContent>
 
         {/* Right buttons for desktop only */}
-        <NavbarContent className="px-4 md:px-12 hidden md:flex" justify="end">
-          <div className="flex items-center gap-3">
+        <NavbarContent
+          className=" hidden md:flex"
+          justify="end"
+        >
+          <div className="flex items-center gap-1 sm:gap-1 md:gap-1 lg:gap-4">
             <button
               className={clsx(
-                "px-6 py-4 rounded-full backdrop-blur-md transition-colors duration-300 border",
+                "px-3 sm:px-2 md:px-6 py-2 sm:py-2 md:py-4 rounded-full backdrop-blur-md transition-colors duration-300 border text-sm sm:text-base md:text-lg",
                 scrolled
                   ? "border-black text-black hover:bg-[#830323] hover:border-[#830323] hover:text-white"
                   : "border-white text-white hover:bg-[#fef3c7] hover:text-black"
@@ -313,7 +322,7 @@ export const Navbar = () => {
             <button
               ref={menuToggleRef}
               className={clsx(
-                "menu-toggle w-12 h-12 rounded-full flex backdrop-blur-md items-center justify-center border transition-colors duration-300",
+                "menu-toggle w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full flex backdrop-blur-md items-center justify-center border transition-colors duration-300",
                 scrolled
                   ? "border-black text-black hover:bg-[#830323] hover:border-[#830323] hover:text-white"
                   : "border-white text-white hover:bg-[#fef3c7] hover:text-black"
@@ -353,7 +362,7 @@ export const Navbar = () => {
                 {menuLinks.map((item, i) => (
                   <h1 key={i} className="link text-white">
                     <Link
-                    ref={(el) => {
+                      ref={(el) => {
                         if (el) menuLinkRefs.current[i] = el;
                       }}
                       href={item.href}
@@ -386,11 +395,11 @@ export const Navbar = () => {
 
           <div className="menu-footer">
             <div className="col-lg text-white">
-              <Link href="/">Run</Link>
+              <Link href="/">Indian Savoury Delights </Link>
             </div>
             <div className="col-sm text-white">
-              <Link href="/">Jereshan</Link>
-              <Link href="/">Indian</Link>
+              <Link href="/">Designed by</Link>
+              <Link href="/">Jereshan Sinan</Link>
             </div>
           </div>
         </div>

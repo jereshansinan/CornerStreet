@@ -57,7 +57,7 @@ const FAQ = () => {
   ];
 
   return (
-    <section className="px-2 md:px-32 py-6 md:py-16 bg-[#fef3c7]" id="faq">
+    <section className="px-2 md:px-12 lg:px-16 xl:px-32 py-6 md:py-16 bg-[#fef3c7]" id="faq">
       {/* Section Heading */}
       <div className="text-center mb-8 md:mb-16">
         <h1 className="text-3xl md:text-5xl">Frequently Asked Questions</h1>{" "}

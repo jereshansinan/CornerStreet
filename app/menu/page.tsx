@@ -44,8 +44,9 @@ export default function MenuPage() {
       items: [
         {
           id: 4,
-          image: "/bunny3.jpg",
-          title: "Beef Bunny Chow",
+          image: "/beefricetop.png",
+          title: "Beef Curry & Rice",
+          hoverImage: "/beefrice.png",
           description:
             "Beef curry served in a hollowed-out loaf of fresh bread",
           price: "R85",
@@ -182,7 +183,7 @@ export default function MenuPage() {
             className="px-2 md:px-16 py-[10px] relative z-10"
             id={section.id}
           >
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[10px]">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3 gap-[10px]">
               {section.items.map((item) => (
                 <div
                   key={item.id}
