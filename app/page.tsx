@@ -1,5 +1,4 @@
 "use client";
-import { useEffect, useState } from "react";
 
 import FAQ from "@/components/faq";
 import HowToOrder from "@/components/how-to-order";
@@ -12,26 +11,9 @@ import ExperienceAnywhere from "@/components/ExperienceAnywhere";
 import Loader from "@/components/Loader";
 
 export default function Home() {
-  const [showLoader, setShowLoader] = useState(false);
-
-  useEffect(() => {
-    const hasVisited = sessionStorage.getItem("hasVisited");
-
-    if (!hasVisited) {
-      setShowLoader(true);
-      sessionStorage.setItem("hasVisited", "true");
-
-      const timer = setTimeout(() => {
-        setShowLoader(false);
-      }, 2000);
-
-      return () => clearTimeout(timer);
-    }
-  }, []);
-
   return (
     <Lenis>
-      {showLoader && <Loader />}
+      <Loader />
       <section className="hero-section flex flex-col items-center justify-center gap-4 py-8 md:py-10 relative">
         <div className="overlay absolute inset-0 bg-black opacity-20" />
         <div className="content text-center relative z-10">
