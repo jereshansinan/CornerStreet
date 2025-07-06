@@ -45,10 +45,9 @@ export default function MenuPage() {
         {
           id: 4,
           image: "/beefricetop.png",
-          title: "Beef Curry & Rice",
+          title: "Curry & Rice",
           hoverImage: "/beefrice.png",
-          description:
-            "Beef curry served in a hollowed-out loaf of fresh bread",
+          description: "Curry served in a hollowed-out loaf of fresh bread",
           price: "R85",
         },
         {
@@ -78,9 +77,9 @@ export default function MenuPage() {
         {
           id: 7,
           image: "/curryNaan2.jpg",
-          title: "Beef Curry & Naan",
+          title: "Curry & Naan",
           hoverImage: "/curryNaan.jpg",
-          description: "Slow-cooked beef curry, served with Naan",
+          description: "Slow-cooked curry, served with Naan",
           price: "R85",
         },
         {
@@ -93,10 +92,10 @@ export default function MenuPage() {
         },
         {
           id: 9,
-          image: "/tacos2.jpg",
-          title: "Beef Taco",
+          image: "/tacos3.jpg",
+          title: "Taco 3x",
           description:
-            "Seasoned ground beef in taco shells, topped with savoury fillings and veggies",
+            "Your choice of meat served in taco shells, topped with savoury fillings and veggies",
           price: "R75",
         },
       ],
@@ -107,26 +106,10 @@ export default function MenuPage() {
       items: [
         {
           id: 10,
-          image: "/tacos3.jpg",
-          title: "Chicken Taco",
-          description:
-            "Tender spiced chicken served in taco shells, topped with savoury fillings and veggies",
-          price: "R75",
-        },
-        {
-          id: 11,
           image: "/wrap.jpg",
-          title: "Chicken Wrap",
+          title: "Wrap",
           description:
-            "Tender Chicken wrapped in a soft roti with fresh salad and sauces",
-          price: "R75",
-        },
-        {
-          id: 12,
-          image: "/wrap2.jpg",
-          title: "Beef Wrap",
-          description:
-            "Ground Beef wrapped in a soft roti with fresh salad and sauces",
+            "Your choice of meat wrapped in a soft roti with fresh salad and sauces",
           price: "R75",
         },
       ],
@@ -136,16 +119,16 @@ export default function MenuPage() {
       title: "Sides",
       items: [
         {
-          id: 13,
+          id: 11,
           image: "/biryani3.png",
-          title: "Biryani",
+          title: "Breyani",
           hoverImage: "/biryani2.png",
           description:
             "Flavorful rice dish layered with chicken, aromatic spices, and herbs",
-          price: "R300",
+          price: "R85",
         },
         {
-          id: 14,
+          id: 12,
           image: "/platters.jpg",
           title: "Custom Platters",
           description:

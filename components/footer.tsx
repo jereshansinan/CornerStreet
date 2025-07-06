@@ -56,7 +56,7 @@ const Footer = () => {
             <div className="space-y-1 md:space-y-2 text-sm md:base xl:base 2xl:text-xl">
               <p>Phone: +27 82 634 6436</p>
               <p>Email: enquiry.indiansavourydelights@gmail.com</p>
-              <p>Venue: Pretoria</p>
+              <p>Venue: Lavender Kontrei Market</p>
             </div>
 
             <div className="my-4 md:my-6" />
