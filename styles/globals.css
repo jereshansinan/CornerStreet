@@ -641,6 +641,10 @@ h1 span{
       font-size: 1rem;
     }
 
+    .word h1{
+      font-size: 1.7rem;
+    }
+
     .gallery-item{
       flex: 0 1 400px;
       height: 600px;

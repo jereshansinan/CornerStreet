@@ -70,7 +70,10 @@ const OurValues = () => {
   }, []);
 
   return (
-    <section className=" relative px-2 md:px-32 py-6 md:py-6 bg-[#1D1D1B]" id="gallery">
+    <section
+      className=" relative px-2 md:px-32 py-6 md:py-6 bg-[#1D1D1B]"
+      id="gallery"
+    >
       <div className="absolute whitespace-nowrap z-0 pointer-events-none animate-scrollText pl-[100vw] hidden md:flex items-center overflow-hidden">
         <h1 className="text-[20vw] md:text-[40vw] text-[#fef3c7]">
           GALLERY • GALLERY • GALLERY • GALLERY • GALLERY • GALLERY • GALLERY •

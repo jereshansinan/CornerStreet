@@ -23,8 +23,7 @@ export default function MenuPage() {
           image: "/springroll.png",
           title: "Spring Rolls",
           hoverImage: "/springroll2.png",
-          description:
-            "Build your own platter with a selection of your favorite savoury items, perfect for any occasion.",
+          description: "Beef or Chicken",
           price: "R8",
         },
         {
@@ -47,7 +46,7 @@ export default function MenuPage() {
           image: "/beefricetop.png",
           title: "Curry & Rice",
           hoverImage: "/beefrice.png",
-          description: "Curry served in a hollowed-out loaf of fresh bread",
+          description: "Curry served with rice and salad",
           price: "R85",
         },
         {
@@ -64,7 +63,7 @@ export default function MenuPage() {
           hoverImage: "/butterrice2.jpg",
           title: "Butter Chicken & Rice",
           description:
-            "Creamy tomato-based curry with tender chicken pieces, served with rice",
+            "Creamy tomato-based curry with tender chicken pieces, served with rice and salad",
           price: "R90",
         },
       ],
@@ -200,7 +199,7 @@ export default function MenuPage() {
                       )}
                     </div>
                   ) : (
-                    <div className="w-full h-[350px] mb-2">
+                    <div className="w-full h-[350px] mb-2 rounded-none">
                       <Image
                         isZoomed
                         alt={item.title}

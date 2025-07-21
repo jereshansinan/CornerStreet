@@ -73,7 +73,7 @@ const OurStory = () => {
             alt="Our Story Image"
             className="absolute top-0 left-0 w-full h-auto object-cover rounded-none will-change-transform"
             height={1000}
-            src="/side4.png"
+            src="/top4.png"
             width={800}
           />
         </div>

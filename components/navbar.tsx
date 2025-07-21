@@ -394,7 +394,7 @@ export const Navbar = () => {
           </div>
 
           <div className="menu-footer">
-            <div className="col-lg text-white">
+            <div className="col-lg text-white hidden md:flex">
               <Link href="/">Indian Savoury Delights </Link>
             </div>
             <div className="col-sm text-white">
