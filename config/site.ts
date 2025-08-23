@@ -1,7 +1,7 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Indian Savoury Delights",
+  name: "Corner Street",
   description: "",
   navItems: [
     {
