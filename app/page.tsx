@@ -15,7 +15,6 @@ export default function Home() {
     <Lenis>
       {/* <Loader /> */}
       <section className="hero-section flex flex-col items-center justify-center gap-4 py-8 md:py-10 relative">
-
         {/* Content container */}
         <div className="content relative z-10 flex items-center justify-center w-full pt-0 md:pt-14">
           {/* SVG Heading (background) */}
