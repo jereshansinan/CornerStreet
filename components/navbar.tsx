@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 "use client";
 import {
   Navbar as HeroUINavbar,
@@ -21,12 +22,12 @@ const menuLinks = [
 const socialLinks = [
   {
     label: "instagram",
-    href: "https://www.instagram.com/indiansavourydelights/",
+    href: "https://www.instagram.com/thecornerstreettacobar/",
   },
   { label: "linkedin", href: "https://www.linkedin.com" },
   {
     label: "facebook",
-    href: "https://www.facebook.com/indiansavourydelights/",
+    href: "https://www.facebook.com",
   },
 ];
 

@@ -11,22 +11,23 @@ gsap.registerPlugin(ScrollTrigger);
 const steps = [
   {
     id: 1,
-    title: "Text Us On WhatsApp",
-    description: "Send us a message with your order from our menu.",
+    title: "Visit Us or Order Online",
+    description:
+      "Come to our restaurant for dine-in, or place your order through Uber Eats for delivery.",
     image: "/whatsapp.png",
   },
   {
     id: 2,
-    title: "Let Us Know Your Preference",
+    title: "Choose Your Favorites",
     description:
-      "Specify whether you'd like to pick up your order or have it delivered. If delivery, we'll arrange it for you.",
+      "Browse our menu and select your favorite dishes, either in person or online.",
     image: "/app1.png",
   },
   {
     id: 3,
-    title: "Make Your Payment",
+    title: "Enjoy Your Meal",
     description:
-      "Pay via EFT, e-wallet, or choose to pay cash or card at collection.",
+      "Relax and enjoy your meal at our restaurant, or wait for your order to arrive at your doorstep.",
     image: "/pay.png",
   },
 ];
@@ -34,32 +35,12 @@ const steps = [
 const HowToOrder = () => {
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
 
-  useEffect(() => {
-    if (window.innerWidth < 768) return;
-
-    cardsRef.current.forEach((card, index) => {
-      gsap.fromTo(
-        card,
-        { y: -50 },
-        {
-          y: 100,
-          scrollTrigger: {
-            trigger: card,
-            start: "top center",
-            end: "bottom center",
-            scrub: true,
-          },
-        }
-      );
-    });
-  }, []);
-
   return (
     <section className="relative overflow-hidden" id="how-to-order">
       {/* Background Image Section */}
       <div
         className="w-full h-auto md:min-h-screen bg-center bg-cover bg-fixed relative flex flex-col items-center justify-center pb-12 pt-32"
-        style={{ backgroundImage: "url('/top4.png')" }}
+        style={{ backgroundImage: "url('/main/Howtoorder.png')" }}
       >
         {/* Dark Overlay */}
         <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-0" />
@@ -72,29 +53,27 @@ const HowToOrder = () => {
         </div>
 
         {/* Centered Step Cards with GSAP Parallax */}
-        <div className="relative z-10 flex flex-col md:flex-row justify-center items-center gap-6 md:gap-10 px-4 md:px-24">
+        <div className="relative z-10 flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16 px-4 md:px-24">
           {steps.map((step, index) => (
             <div
               key={step.id}
               ref={(el) => {
                 cardsRef.current[index] = el;
               }}
-              className="bg-[#fef3c7] shadow-xl w-full max-w-[18rem] md:max-w-xs flex flex-col overflow-hidden"
-              style={{
-                marginTop: index === 0 ? 0 : undefined, // only stagger on md and up
-              }}
+              className="bg-[#1976d2] shadow-2xl rounded-3xl w-full max-w-[28rem] md:max-w-[32rem] flex flex-col overflow-hidden items-center"
             >
-              <img
-                alt={step.title}
-                className="w-full h-56 object-cover"
-                src={step.image}
-              />
-              <div className="p-6 flex flex-col justify-center text-center">
-                <h1 className="text-3xl font-bold mb-2 text-[#830323]">{`0${step.id}`}</h1>
-                <h3 className="text-xl font-semibold mb-2 text-black">
+              <div className="flex flex-col items-center justify-center py-12 md:py-20">
+                <span className="text-[white] font-extrabold text-[7rem] md:text-[10rem] leading-none drop-shadow-lg select-none">
+                  {`0${step.id}`}
+                </span>
+              </div>
+              <div className="p-8 flex flex-col justify-center text-center">
+                <h3 className="text-2xl md:text-3xl font-semibold mb-4 text-white">
                   {step.title}
                 </h3>
-                <p className="text-base text-black">{step.description}</p>
+                <p className="text-lg md:text-xl text-white">
+                  {step.description}
+                </p>
               </div>
             </div>
           ))}

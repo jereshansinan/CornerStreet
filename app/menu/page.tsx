@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 "use client";
 import { Image } from "@heroui/image";
 
@@ -7,111 +8,210 @@ export default function MenuPage() {
   // Example menu data
   const menuSections = [
     {
-      id: "burgers",
-      title: "Burgers",
+      id: "Dogos/HotDogs",
+      title: "Dogos/HotDogs",
       items: [
         {
           id: 1,
-          image: "/main/burgerHero.png",
-          title: "Classic Beef Burger",
-          hoverImage: "/samoosas2.jpg",
+          image: "https://i.imgur.com/OzpMtod.jpg",
+          title: "Regular Hotdog",
           description:
-            "INGREDIENTS: Bread Bun, Beef Patty, Cheddar Cheese, Lettuce, Tomatoes, Onion Slice",
+            "INGREDIENTS: Onion,tomato, jalapeno, ketchup, mayo, mustard",
           price: "Burger Only 3.99$ | Regular 5.99$ | Meal 10.99$",
         },
         {
           id: 2,
-          image: "/main/burgerHero.png",
-          title: "Bacon Cheeseburger",
-          hoverImage: "/springroll2.png",
+          image: "https://i.imgur.com/UcOFpOr.jpg",
+          title: "Bacon Grilled Hotdog",
           description:
-            "INGREDIENTS: Bread Bun, Bacon, Cheddar Cheese, Beef Patty, Lettuce, Tomatoes",
+            "INGREDIENTS: Oaxaca cheese, tomato, onion, jalapeño, ketchup, mayo, mustard",
           price: "Burger Only 3.99$ | Regular 5.99$ | Meal 10.99$",
         },
         {
           id: 3,
-          image: "/main/burgerHero.png",
-          title: "Chicken Burger",
-          hoverImage: "/bunnychow.jpg",
+          image: "https://i.imgur.com/jcYF5Wb.jpg",
+          title: "Dogo Argentino",
           description:
-            "INGREDIENTS: Bread Bun, Grilled Chicken Breast, Lettuce, Tomatoes, Mayo",
+            "INGREDIENTS: Spicy Italian sausage, grilled onions, anahen pepper, mayo, mustard",
           price: "Burger Only 3.99$ | Regular 5.99$ | Meal 10.99$",
+        },
+      ],
+    },
+    {
+      id: "Burgers",
+      title: "Burgers",
+      items: [
+        {
+          id: 4,
+          image: "/main/burgerHero.png",
+          title: "Cheese burger",
+          description:
+            "INGREDIENTS: Cheese, onions, tomato, lettuce, burger patty",
+          price: "Wings Only 3.99$ | Regular 5.99$ | Meal 10.99$",
+        },
+        {
+          id: 5,
+          image: "https://i.imgur.com/Ima9aGY.jpg",
+          title: "Hawayana burger",
+          description:
+            "INGREDIENTS: Pineapple, ham, burger patty, cheese, bacon, lettuce, tomato, onions, mayo, mustard, ketchup",
+          price: "Wings Only 3.99$ | Regular 5.99$ | Meal 10.99$",
+        },
+        {
+          id: 6,
+          image: "https://i.imgur.com/hkQqG7d.jpg",
+          title: "The Champion Burger",
+          description:
+            "INGREDIENTS: Bacon, ham, burger patty, egg, cheese, lettuce, onion, mayo",
+          price: "Wings Only 3.99$ | Regular 5.99$ | Meal 10.99$",
+        },
+        {
+          id: 7,
+          image: "/main/burger7.png",
+          title: "The Corner Hamburger",
+          description:
+            "INGREDIENTS: Grilled mushroom, onion, bacon, grilled jalapeños, burger patty, special sauce",
+          price: "Wings Only 3.99$ | Regular 5.99$ | Meal 10.99$",
         },
       ],
     },
     {
       id: "wings",
       title: "Wings",
+      subheading: "Tasty wings with classic toppings",
       items: [
-        {
-          id: 4,
-          image: "/main/burgerHero.png",
-          title: "Buffalo Wings",
-          hoverImage: "/beefrice.png",
-          description:
-            "INGREDIENTS: Chicken Wings, Buffalo Sauce, Celery, Ranch Dip",
-          price: "Wings Only 3.99$ | Regular 5.99$ | Meal 10.99$",
-        },
-        {
-          id: 5,
-          image: "/main/burgerHero.png",
-          title: "BBQ Wings",
-          description: "INGREDIENTS: Chicken Wings, BBQ Sauce, Spring Onion",
-          price: "Wings Only 3.99$ | Regular 5.99$ | Meal 10.99$",
-        },
-        {
-          id: 6,
-          image: "/main/burgerHero.png",
-          hoverImage: "/butterrice2.jpg",
-          title: "Spicy Wings",
-          description: "INGREDIENTS: Chicken Wings, Hot Sauce, Jalapenos",
-          price: "Wings Only 3.99$ | Regular 5.99$ | Meal 10.99$",
-        },
-      ],
-    },
-    {
-      id: "hotdogs",
-      title: "Hotdogs",
-      subheading: "Tasty hotdogs with classic toppings",
-      items: [
-        {
-          id: 7,
-          image: "/main/burgerHero.png",
-          title: "Classic Hotdog",
-          hoverImage: "/curryNaan.jpg",
-          description:
-            "INGREDIENTS: Hotdog Bun, Beef Sausage, Mustard, Ketchup, Onion",
-          price: "Hotdog Only 3.99$ | Regular 5.99$ | Meal 10.99$",
-        },
         {
           id: 8,
           image: "/main/burgerHero.png",
-          title: "Chili Cheese Hotdog",
-          description:
-            "INGREDIENTS: Hotdog Bun, Beef Sausage, Chili, Cheddar Cheese",
+          title: "Mild Wings",
+          description: "",
           price: "Hotdog Only 3.99$ | Regular 5.99$ | Meal 10.99$",
         },
         {
           id: 9,
+          image: "https://i.imgur.com/iZUI2jH.jpg",
+          title: "Hot Wings",
+          description: "",
+          price: "Hotdog Only 3.99$ | Regular 5.99$ | Meal 10.99$",
+        },
+        {
+          id: 10,
           image: "/main/burgerHero.png",
-          title: "Veggie Hotdog",
-          description:
-            "INGREDIENTS: Hotdog Bun, Veggie Sausage, Lettuce, Tomatoes, Onion",
+          title: "Spicy tamarindo Wings",
+          description: "",
+          price: "Hotdog Only 3.99$ | Regular 5.99$ | Meal 10.99$",
+        },
+        {
+          id: 11,
+          image: "/main/burgerHero.png",
+          title: "Mango habanero Wings",
+          description: "",
+          price: "Hotdog Only 3.99$ | Regular 5.99$ | Meal 10.99$",
+        },
+        {
+          id: 12,
+          image: "https://i.imgur.com/WnObc2r.jpg",
+          title: "Scorpion hot Wings",
+          description: "",
+          price: "Hotdog Only 3.99$ | Regular 5.99$ | Meal 10.99$",
+        },
+        {
+          id: 13,
+          image: "/main/burgerHero.png",
+          title: "BBQ Wings",
+          description: "",
+          price: "Hotdog Only 3.99$ | Regular 5.99$ | Meal 10.99$",
+        },
+        {
+          id: 14,
+          image: "/main/burgerHero.png",
+          title: "Lemon pepper Wings",
+          description: "",
+          price: "Hotdog Only 3.99$ | Regular 5.99$ | Meal 10.99$",
+        },
+        {
+          id: 15,
+          image: "/main/burgerHero.png",
+          title: "Chammy Wings",
+          description: "",
+          price: "Hotdog Only 3.99$ | Regular 5.99$ | Meal 10.99$",
+        },
+        {
+          id: 16,
+          image: "/main/burgerHero.png",
+          title: "Fuego Wings",
+          description: "",
           price: "Hotdog Only 3.99$ | Regular 5.99$ | Meal 10.99$",
         },
       ],
     },
     {
-      id: "veggies",
-      title: "Veggie Burgers",
+      id: "chicken-tenders",
+      title: "Chicken Tenders/Fries",
       items: [
         {
-          id: 10,
-          image: "/main/burgerHero.png",
-          title: "Falafel Burger",
+          id: 17,
+          image: "https://i.imgur.com/6LaLC3Q.jpg",
+          title: "Mild Chicken Tenders",
           description:
             "INGREDIENTS: Bread Bun, Falafel Patty, Lettuce, Tomatoes, Tzatziki Sauce",
           price: "Burger Only 3.99$ | Regular 5.99$ | Meal 10.99$",
+        },
+        {
+          id: 18,
+          image: "/main/burgerHero.png",
+          title: "Hot Chicken Tenders",
+          description: "",
+          price: "Hotdog Only 3.99$ | Regular 5.99$ | Meal 10.99$",
+        },
+        {
+          id: 19,
+          image: "/main/burgerHero.png",
+          title: "Spicy tamarindo Chicken Tenders",
+          description: "",
+          price: "Hotdog Only 3.99$ | Regular 5.99$ | Meal 10.99$",
+        },
+        {
+          id: 20,
+          image: "/main/burgerHero.png",
+          title: "Mango habanero Chicken Tenders",
+          description: "",
+          price: "Hotdog Only 3.99$ | Regular 5.99$ | Meal 10.99$",
+        },
+        {
+          id: 21,
+          image: "/main/burgerHero.png",
+          title: "Scorpion hot Chicken Tenders",
+          description: "",
+          price: "Hotdog Only 3.99$ | Regular 5.99$ | Meal 10.99$",
+        },
+        {
+          id: 22,
+          image: "/main/burgerHero.png",
+          title: "BBQ Chicken Tenders",
+          description: "",
+          price: "Hotdog Only 3.99$ | Regular 5.99$ | Meal 10.99$",
+        },
+        {
+          id: 23,
+          image: "/main/burgerHero.png",
+          title: "Lemon pepper Chicken Tenders",
+          description: "",
+          price: "Hotdog Only 3.99$ | Regular 5.99$ | Meal 10.99$",
+        },
+        {
+          id: 24,
+          image: "/main/burgerHero.png",
+          title: "Chammy Chicken Tenders",
+          description: "",
+          price: "Hotdog Only 3.99$ | Regular 5.99$ | Meal 10.99$",
+        },
+        {
+          id: 25,
+          image: "/main/burgerHero.png",
+          title: "Fuego Chicken Tenders",
+          description: "",
+          price: "Hotdog Only 3.99$ | Regular 5.99$ | Meal 10.99$",
         },
       ],
     },
@@ -120,18 +220,38 @@ export default function MenuPage() {
       title: "Sides",
       items: [
         {
-          id: 11,
+          id: 26,
           image: "/main/burgerHero.png",
-          title: "Fries",
-          hoverImage: "/biryani2.png",
-          description: "INGREDIENTS: Potato Fries, Salt, Ketchup",
+          title: "French Fries",
+          description: "",
           price: "Side Only 3.99$ | Regular 5.99$ | Meal 10.99$",
         },
         {
-          id: 12,
+          id: 27,
+          image: "/main/burgerHero.png",
+          title: "Loaded Fries",
+          description: "Queso, Chorizo, Pico, Jalapeño, Crema",
+          price: "Side Only 3.99$ | Regular 5.99$ | Meal 10.99$",
+        },
+        {
+          id: 28,
           image: "/main/burgerHero.png",
           title: "Onion Rings",
-          description: "INGREDIENTS: Onion Rings, Batter, Salt",
+          description: "",
+          price: "Side Only 3.99$ | Regular 5.99$ | Meal 10.99$",
+        },
+        {
+          id: 29,
+          image: "/main/burgerHero.png",
+          title: "South west chicken rolls",
+          description: "",
+          price: "Side Only 3.99$ | Regular 5.99$ | Meal 10.99$",
+        },
+        {
+          id: 30,
+          image: "/main/burgerHero.png",
+          title: "Mozarella sticks",
+          description: "",
           price: "Side Only 3.99$ | Regular 5.99$ | Meal 10.99$",
         },
       ],
@@ -171,19 +291,23 @@ export default function MenuPage() {
           <div className="flex flex-wrap justify-center gap-4 px-2 py-2 rounded-full border-2 border-blue-500 bg-white">
             {[
               {
-                label: "Starters",
+                label: "Dogos/HotDogs",
                 img: "/main/burgerHero.png",
               },
               {
-                label: "Mains",
+                label: "Burgers",
+                img: "/main/burgerHero.png",
+              },
+              {
+                label: "Wings",
+                img: "/main/burgerHero.png",
+              },
+              {
+                label: "Chicken Tenders",
                 img: "/main/burgerHero.png",
               },
               {
                 label: "Sides",
-                img: "/main/burgerHero.png",
-              },
-              {
-                label: "Deserts",
                 img: "/main/burgerHero.png",
               },
             ].map((filter) => (
@@ -219,40 +343,15 @@ export default function MenuPage() {
                   className="border bg-white text-white overflow-hidden p-[8px] flex flex-col items-center"
                 >
                   {/* Image */}
-                  {item.hoverImage ? (
-                    <div className="relative h-[400px] mb-2 group overflow-hidden flex justify-center items-center w-full">
-                      {/* Default Image */}
-                      <div className="absolute inset-0 flex justify-center items-center w-full h-full">
-                        <Image
-                          alt={item.title}
-                          className="object-cover !rounded-none transition-transform duration-500 ease-in-out group-hover:scale-105"
-                          height={600}
-                          src={item.image}
-                          width="100%"
-                        />
-                      </div>
-                      {/* Hover Image (fade in on hover) */}
-                      <div className="absolute inset-0 flex justify-center items-center w-full h-full pointer-events-none transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100">
-                        <Image
-                          alt={item.title + " hover"}
-                          className="object-cover !rounded-none"
-                          height={600}
-                          src={item.hoverImage}
-                          width="100%"
-                        />
-                      </div>
-                    </div>
-                  ) : (
-                    <div className="w-full h-[400px] mb-2 rounded-none flex justify-center items-center group overflow-hidden">
-                      <Image
-                        alt={item.title}
-                        className="object-cover !rounded-none transition-transform duration-500 ease-in-out group-hover:scale-105"
-                        height={600}
-                        src={item.image}
-                        width="100%"
-                      />
-                    </div>
-                  )}
+                  <div className="w-full h-[400px] mb-2 rounded-none flex justify-center items-center group overflow-hidden">
+                    <Image
+                      alt={item.title}
+                      className="object-cover !rounded-none transition-transform duration-500 ease-in-out group-hover:scale-105"
+                      height={600}
+                      src={item.image}
+                      width="100%"
+                    />
+                  </div>
 
                   {/* Content */}
                   <div className="flex flex-col gap-[30px] w-full justify-center items-center">

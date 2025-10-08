@@ -69,16 +69,17 @@ const ExperienceAnywhere = () => {
         className="w-full md:w-1/2 text-lg md:text-xl leading-relaxed"
       >
         <p>
-          We don’t serve from a storefront.
+          Craving your favorite burger or wings? We’ve got you covered
           <br />
-          Instead, we show up where you are, at local markets, private
-          celebrations, and vibrant street corners.
+          Order through Uber Eats or grab a table with just one click.
           <br />
-          Each dish is cooked to be shared, savored, remembered.
+          From busy weekdays to laid-back weekends, great food is always within
+          reach.
           <br />
-          Because for us, food isn’t about a place. It’s about people.
+          Fresh off the grill, delivered hot and fast. Your cravings shouldn’t
+          have to wait, we bring the flavor to you.
           <br />
-          It’s about bringing the flavors of home to the world around us.
+          So go ahead, book now and taste the corner everyone’s talking about.
         </p>
       </div>
     </section>

@@ -5,19 +5,22 @@ import Link from "next/link";
 
 const foods = [
   {
-    name: "Hotdog",
+    name: "Hotdogs",
     image: "/main/hotdog2.png",
-    description: "Ingredients: Potatoes, peas, spices, crispy pastry",
+    description:
+      "From classic to bold, our hotdogs hit every craving. Try the Regular, go cheesy with the Bacon Grilled, or spice it up with the Dogo Argentino and its fiery Italian sausage twist.",
   },
   {
-    name: "Burger",
+    name: "Burgers",
     image: "/main/burgerHero.png",
-    description: "Ingredients: Crispy crackers, potatoes, yogurt, chutneys",
+    description:
+      "Stacked, juicy, and grilled just right. Grab a Cheeseburger, taste the tropical Hawayana,go big with The Champion, or savor our signature Corner Burger with grilled mushrooms and special sauce.",
   },
   {
     name: "Wings",
     image: "/main/wing2.png",
-    description: "Ingredients: Vegetables, chickpea flour, spices, fried",
+    description:
+      "Crispy, saucy, and full of flavor. Take your pick from Mild to Fuego, or try fan favorites like Mango Habanero, BBQ, and Lemon Pepper — every bite brings the heat.",
   },
 ];
 
@@ -37,21 +40,19 @@ const CateringSection = () => (
         <div
           key={food.name}
           className={`flex flex-col items-center w-full ${
-            idx === 1 ? "md:scale-110" : "md:scale-95"
+            idx === 1 ? "md:scale-95" : "md:scale-95"
           }`}
         >
           <img
             src={food.image}
             alt={food.name}
-            className={`rounded-2xl object-cover ${
+            className={`rounded-2xl object-cover hover:scale-105 transition-transform duration-300 ${
               idx === 1
                 ? "w-[260px] h-[260px] md:w-[340px] md:h-[360px]"
                 : "w-[200px] h-[260px] md:w-[260px] md:h-[360px]"
             }`}
           />
-          <h1 className="text-2xl md:text-3xl mt-6 text-center">
-            {food.name}
-          </h1>
+          <h1 className="text-2xl md:text-3xl mt-6 text-center">{food.name}</h1>
           <p className="text-md md:text-lg text-center mt-2 text-gray-700">
             {food.description}
           </p>

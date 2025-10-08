@@ -22,7 +22,7 @@ const Footer = () => {
                 { label: "Menu", href: "/menu" },
                 { label: "Contact Us", href: "/contact-us" },
               ].map((link, i) => (
-                <a key={i} className="hover:text-[#830323]" href={link.href}>
+                <a key={i} className="hover:text-[#D22227]" href={link.href}>
                   <h1 className="text-xl lg:2xl xl:4xl 2xl:text-6xl">
                     {link.label}
                   </h1>
@@ -52,16 +52,15 @@ const Footer = () => {
             <h2 className="text-base md:text-xl mb-4">Contact Us</h2>
 
             <div className="space-y-1 md:space-y-2 text-sm md:base xl:base 2xl:text-xl">
-              <p>Phone: +27 82 634 6436</p>
-              <p>Email: enquiry.indiansavourydelights@gmail.com</p>
-              <p>Venue: Lavender Kontrei Market</p>
+              <p>Phone: (770) 485-7650</p>
+              <p>Location: Georgia</p>
             </div>
 
             <div className="my-4 md:my-6" />
 
             <div className="space-y-1 md:space-y-2 text-sm md:base xl:base 2xl:text-xl">
-              <p>Open: Wed – Sun</p>
-              <p>Hours: 10:00 AM – 6:00 PM</p>
+              <p>Open: Mon – Sun</p>
+              <p>Hours: 8:00 AM – 7:00 PM</p>
             </div>
           </div>
         </div>
@@ -71,7 +70,7 @@ const Footer = () => {
           {/* Bottom Left - Quote */}
           <div className="flex-1 border-white border-t-1 p-2 md:p-2 xl:p-2 2xl:p-4 flex items-center justify-center text-center text-gray-500">
             <p className="text-sm md:text-xs xl:text-sm 2xl:text-base italic text-white">
-              “Flavour is the essence of memory.”
+              “In America, food is not just fuel, it’s culture on a plate.”
             </p>
           </div>
 
@@ -84,22 +83,16 @@ const Footer = () => {
           <div className="flex-1 border-white border-t-1 p-2 md:p-4 flex items-center justify-center">
             <div className="flex space-x-4 text-white">
               <a
-                className="hover:text-[#830323]"
-                href="https://wa.me/0826346436"
+                className="hover:text-[#D22227]"
+                href="https://wa.me/7704857650"
               >
                 <FaWhatsapp className="w-5 h-5" />
               </a>
               <a
-                className="hover:text-[#830323]"
-                href="https://www.instagram.com/indiansavourydelights/"
+                className="hover:text-[#D22227]"
+                href="https://www.instagram.com/thecornerstreettacobar/"
               >
                 <FaInstagram className="w-5 h-5" />
-              </a>
-              <a
-                className="hover:text-[#830323]"
-                href="https://www.tiktok.com/"
-              >
-                <FaTiktok className="w-5 h-5" />
               </a>
             </div>
           </div>
@@ -110,7 +103,7 @@ const Footer = () => {
           <img
             alt="Bottom Visual"
             className="w-full h-full object-cover"
-            src="/spicestop.png"
+            src="/main/howtoorder.png"
           />
         </div>
       </div>

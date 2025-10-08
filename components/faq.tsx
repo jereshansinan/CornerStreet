@@ -8,51 +8,45 @@ const FAQ = () => {
   const faqItems = [
     {
       id: "1",
-      question: "Is your food Halal?",
+      question: "Are your burgers made fresh?",
       answer:
-        "Yes, all our meat is sourced from certified Halal suppliers, and we prepare everything in a Halal-friendly environment.",
+        "Yes, all our burgers are made fresh to order using high-quality beef and ingredients.",
     },
     {
       id: "2",
-      question: "Do you offer vegan or vegetarian options?",
+      question: "Do you offer vegetarian or vegan options?",
       answer:
-        "Yes, we have delicious vegan and vegetarian options available. Just let us know your preference when ordering!",
+        "We offer a veggie burger and can customize some dishes for vegetarian guests. Please ask our staff for details.",
     },
     {
       id: "3",
-      question: "How can I place an order?",
+      question: "How spicy are your wings?",
       answer:
-        "You can order via WhatsApp, call us directly, or send us a message on social media. Let us know if you’d like pickup or delivery.",
+        "Our wings come in a variety of spice levels, from mild to extra hot. Let us know your preference when ordering.",
     },
     {
       id: "4",
-      question: "Do you offer delivery?",
+      question: "Do you serve hotdogs?",
       answer:
-        "Yes, we offer delivery within selected areas. Delivery availability will be confirmed when you place your order.",
+        "Yes, we serve classic American-style hotdogs with a variety of toppings.",
     },
     {
       id: "5",
-      question: "How spicy is your food?",
+      question: "Can I place an order for pickup or delivery?",
       answer:
-        "We can adjust the spice level to your preference—from mild to extra hot. Just mention your spice preference when ordering.",
+        "Absolutely! You can order online through uber eats, call us, or visit in person.",
     },
     {
       id: "6",
-      question: "Do you take large orders for events or catering?",
+      question: "What payment methods do you accept?",
       answer:
-        "Absolutely! We cater for parties, events, and functions. Contact us in advance for custom platters and bulk pricing.",
+        "We accept cash, credit/debit cards, and mobile payments. Please confirm your payment method when ordering.",
     },
     {
       id: "7",
-      question: "What payment methods do you accept?",
-      answer:
-        "We accept EFT, e-wallet, SnapScan, and cash or card on collection. Please confirm your payment method when placing your order.",
-    },
-    {
-      id: "8",
       question: "Where are you located?",
       answer:
-        "We operate from Pretoria. Orders are available for pickup or delivery. We’ll share the pickup details once your order is confirmed.",
+        "Corner Street Burgers & Wings is located in Georgia. Visit our website or contact us for our exact address and hours.",
     },
   ];
 
