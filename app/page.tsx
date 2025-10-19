@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 "use client";
 
 import FAQ from "@/components/faq";
@@ -7,7 +8,6 @@ import OurStory from "@/components/our-story";
 import Gallery from "@/components/gallery";
 import CateringSection from "@/components/CateringSection";
 import ExperienceAnywhere from "@/components/ExperienceAnywhere";
-import Loader from "@/components/Loader";
 import CategoryHeader from "@/components/CategoryHeader";
 
 export default function Home() {
@@ -27,9 +27,9 @@ export default function Home() {
           {/* Layered image on top of the SVG */}
           <div className="absolute flex items-center justify-center">
             <img
-              src="/main/burgerHero.png"
               alt="Center Graphic"
               className="w-64 sm:w-28 md:w-36 lg:w-44 xl:w-52 2xl:w-[40rem] h-auto"
+              src="/main/burgerHero.png"
             />
           </div>
         </div>

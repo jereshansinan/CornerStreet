@@ -43,7 +43,7 @@ const OurValues = () => {
         />
         <button
           aria-label="Previous"
-          className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/60 text-white rounded-full p-3 shadow-lg hover:bg-black/80 transition"
+          className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/40 text-white rounded-full p-3 shadow-lg hover:bg-black/80 transition"
           onClick={prevImage}
         >
           <svg
@@ -62,7 +62,7 @@ const OurValues = () => {
         </button>
         <button
           aria-label="Next"
-          className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/60 text-white rounded-full p-3 shadow-lg hover:bg-black/80 transition"
+          className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/40 text-white rounded-full p-3 shadow-lg hover:bg-black/80 transition"
           onClick={nextImage}
         >
           <svg

@@ -46,15 +46,16 @@ const ExperienceAnywhere = () => {
       ref={containerRef}
       className="bg-[#1976d2] text-white min-h-[50vh] flex flex-col md:flex-row items-center justify-between px-6 md:px-24 py-16 gap-5 md:gap-10"
     >
-      {/* Left Side - Heading and Button */}
+      {/* Left Side - Heading (button shown only on md+) */}
       <div className="w-full md:w-1/2 flex flex-col items-start gap-6">
         <h1 ref={headingRef} className="text-3xl md:text-5xl leading-tight">
           Food, Wherever You Are
         </h1>
+
+        {/* Desktop button - hidden on mobile */}
         <Link
           ref={buttonRef}
-          className="px-6 py-4 border-1 border-[#D22227] bg-[#D22227] 
-          text-white rounded-full transition hover:border-white hover:bg-white hover:text-black"
+          className="hidden md:inline-block px-6 py-4 border-1 border-[#D22227] bg-[#D22227] text-white rounded-full transition hover:border-white hover:bg-white hover:text-black"
           href="/Indian Savoury Delights Menu.pdf"
           rel="noopener noreferrer"
           target="_blank"
@@ -81,6 +82,18 @@ const ExperienceAnywhere = () => {
           <br />
           So go ahead, book now and taste the corner everyone’s talking about.
         </p>
+
+        {/* Mobile button - shown only on mobile and placed below the text */}
+        <div className="mt-6 md:hidden">
+          <Link
+            className="w-full block text-center px-6 py-4 border-1 border-[#D22227] bg-[#D22227] text-white rounded-full transition hover:border-white hover:bg-white hover:text-black"
+            href="/Indian Savoury Delights Menu.pdf"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Book Now
+          </Link>
+        </div>
       </div>
     </section>
   );

@@ -19,10 +19,9 @@ export async function POST(req: Request) {
 
     // Email content
     const mailOptions = {
-      from: `"Indian Savoury Delights" <${process.env.EMAIL_USER}>`,
-      to: "youmeshanee.sinan@resbank.co.za",
+      from: `"Corner Street" <${process.env.EMAIL_USER}>`,
+      to: "cornerStreet",
       replyTo: email,
-      cc: "jereshan.sinan11@gmail.com",
       subject: "New Contact Form Submission",
       html: `<!DOCTYPE html>
 <html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="en">

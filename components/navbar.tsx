@@ -24,7 +24,7 @@ const socialLinks = [
     label: "instagram",
     href: "https://www.instagram.com/thecornerstreettacobar/",
   },
-  { label: "linkedin", href: "https://www.linkedin.com" },
+  { label: "Uber Eats", href: "https://www.linkedin.com" },
   {
     label: "facebook",
     href: "https://www.facebook.com",
@@ -227,7 +227,7 @@ export const Navbar = () => {
             )}
           >
             <a
-              href="https://www.instagram.com/indiansavourydelights/"
+              href="https://www.instagram.com/thecornerstreettacobar/"
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -247,8 +247,8 @@ export const Navbar = () => {
               className={clsx(
                 "px-3 py-2 rounded-full backdrop-blur-md transition-colors duration-300 border text-sm",
                 scrolled
-                  ? "border-black text-black hover:bg-[#830323] hover:border-[#830323] hover:text-white"
-                  : "border-[#1976d2] bg-[#1976d2] text-white hover:bg-[#D22227] hover:text-black"
+                  ? "border-black text-black hover:bg-[#D22227] hover:border-[#D22227] hover:text-white"
+                  : "bg-[#1976d2] text-white hover:bg-[#D22227] hover:text-black"
               )}
               onClick={handleClick}
             >
@@ -289,7 +289,7 @@ export const Navbar = () => {
               className={clsx(
                 "w-10 h-10 rounded-full flex backdrop-blur-md items-center justify-center border transition-colors duration-300",
                 scrolled
-                  ? "border-black text-black hover:bg-[#830323] hover:border-[#830323] hover:text-white"
+                  ? "border-black text-black hover:bg-[#D22227] hover:border-[#D22227] hover:text-white"
                   : "border-[#1976d2] bg-[#1976d2] text-white hover:bg-[#fef3c7] hover:text-black"
               )}
               onClick={handleMenuClick}

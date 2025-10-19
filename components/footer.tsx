@@ -36,15 +36,10 @@ const Footer = () => {
             <div className="w-full flex items-center justify-center">
               <img
                 alt="image2"
-                className="max-w-[20%] h-auto rounded-none mt-4"
+                className="max-w-[30%] h-auto rounded-none mt-4"
                 src="/main/logo.png"
               />
             </div>
-            <img
-              alt="image2"
-              className="max-w-[80%] h-auto rounded-none mt-4"
-              src="/top.png"
-            />
           </div>
 
           {/* Right Block - Contact Info */}

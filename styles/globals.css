@@ -695,6 +695,14 @@ h1 span{
     .hero-section::before {
     }
 
+    .hero-section {
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+    will-change: transform;
+    transform-origin: right top;
+  }
+
     h1{
       font-size: 2.5rem;
       letter-spacing: 0;
